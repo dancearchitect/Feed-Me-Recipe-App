@@ -27,5 +27,5 @@ Membership is <b>FREE</b> and allows users to upload their own recipes and favor
 
 <h3>MVP</h3>
 CRUD backend database allowing users to create, update, find and delete recipes.<br />
-__Post MVP__<br />
+<b>Post MVP</b><br />
 User login/signup. Dashboard with a list of recipes the user has created and favorited.
