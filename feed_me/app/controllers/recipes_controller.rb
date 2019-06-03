@@ -33,4 +33,5 @@ class RecipesController < ActionController::API
 
     def recipe_params
         params.require(:recipe).permit(:name, :meal_image, :cuisine, :region, :cook_time, :ingredients, :measurements, :servings, :instructions, :user_id)
+    end
 end
