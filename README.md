@@ -21,7 +21,8 @@ Membership is <b>FREE</b> and allow users to upload their own recipes and favori
 <img width="1024" alt="UpdateRecipe" src="https://user-images.githubusercontent.com/47368206/58806775-dab76300-85e4-11e9-86db-a37373a66568.png">
 
 <h3>Components/ERD</h3>
-
+<img width="360" alt="Components" src="https://user-images.githubusercontent.com/47368206/58806925-2702a300-85e5-11e9-9c21-0c0f0b499bf7.png">
+<img width="868" alt="ERD" src="https://user-images.githubusercontent.com/47368206/58806930-28cc6680-85e5-11e9-9c14-7881746692ee.png">
 
 <h3>MVP</h3>
 CRUD backend database allowing memebers to create, update and delete recipes while non-members can find recipes.
