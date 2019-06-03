@@ -1,6 +1,7 @@
 # FeedMe! Recipe App
 ![audrey2](https://user-images.githubusercontent.com/47368206/58807221-abedbc80-85e5-11e9-996b-0083de9edf1a.gif)
 
+![feedme-logo](https://user-images.githubusercontent.com/47368206/58816386-6f2ac100-85f7-11e9-992c-248bb2c42509.png)
 <b>FeedMe!</b> is a simple and efficient recipe app for chefs of all levels. <br />
 Non-members can search recipes by ingredients, cuisine or region.<br />
 Membership is <b>FREE</b> and allows users to upload their own recipes and favorite the ones they love!(<b>GIT IT!</b>)
