@@ -25,5 +25,6 @@ Membership is <b>FREE</b> and allow users to upload their own recipes and favori
 <img width="868" alt="ERD" src="https://user-images.githubusercontent.com/47368206/58806930-28cc6680-85e5-11e9-9c14-7881746692ee.png">
 
 <h3>MVP</h3>
-CRUD backend database allowing memebers to create, update and delete recipes while non-members can find recipes.
-Members able to favorite recipes.
+CRUD backend database allowing users to create, update, find and delete recipes.
+**Post MVP**
+User login/signup. Dashboard with a list of recipes the user has created and favorited.
