@@ -11,6 +11,14 @@ Membership is <b>FREE</b> and allow users to upload their own recipes and favori
 - cors<br />
 
 <h3>Wireframes</h3>
+<img width="1025" alt="Home" src="https://user-images.githubusercontent.com/47368206/58806771-dab76300-85e4-11e9-8103-a0eb845f380a.png">
+<img width="1024" alt="AllRecipes" src="https://user-images.githubusercontent.com/47368206/58806763-d8ed9f80-85e4-11e9-9641-6235b0a5b65c.png">
+<img width="1022" alt="Region" src="https://user-images.githubusercontent.com/47368206/58806774-dab76300-85e4-11e9-8a43-d9354c408074.png">
+<img width="1021" alt="Cuisines" src="https://user-images.githubusercontent.com/47368206/58806767-d9863600-85e4-11e9-96d2-43be1f50b647.png">
+<img width="1022" alt="RecipePage" src="https://user-images.githubusercontent.com/47368206/58806773-dab76300-85e4-11e9-9a8f-d93176182627.png">
+<img width="1022" alt="CreateRecipe" src="https://user-images.githubusercontent.com/47368206/58806766-d9863600-85e4-11e9-98b8-5beb249ac266.png">
+<img width="1020" alt="Dashboard" src="https://user-images.githubusercontent.com/47368206/58806770-da1ecc80-85e4-11e9-9b88-882f7bdc19ae.png">
+<img width="1024" alt="UpdateRecipe" src="https://user-images.githubusercontent.com/47368206/58806775-dab76300-85e4-11e9-86db-a37373a66568.png">
 
 <h3>Components/ERD</h3>
 
