@@ -4207,3 +4207,54 @@ Migrating to CreateCuisines (20190605133258)
   ↳ db/seeds.rb:29
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:29
+Started GET "/recipes" for ::1 at 2019-06-05 09:52:52 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rachelgonzalez/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 33ms (Views: 20.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 09:52:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 09:53:03 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 09:53:23 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 09:53:24 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 09:53:31 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 09:53:37 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.8ms)
+
+
