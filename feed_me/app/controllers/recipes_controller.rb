@@ -4,6 +4,8 @@ class RecipesController < ActionController::API
         render json: @recipes, status: :ok
     end
 
+    def
+
     def create 
         @recipe = Recipe.new(recipe_params)
 

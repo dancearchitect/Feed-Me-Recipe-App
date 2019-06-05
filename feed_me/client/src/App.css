@@ -2,26 +2,3 @@
   text-align: center;
 }
 
-.ingred-measure {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* .ingredients {
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.measurements {
-  display: flex;
-  
-} */
-
-.instructions {
-  width: 500px;
-}
-
-img {
-  width: 300px;
-}

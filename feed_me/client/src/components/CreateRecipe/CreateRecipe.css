@@ -1,0 +1,40 @@
+form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+}
+
+input {
+    width: 200px;
+    height: 20px;
+    outline: none;
+    border: 1px solid black;
+
+}
+
+.create-recipe-form {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    outline: none;
+    border: 1px solid black;
+}
+
+button {
+    width: 80px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    border: none;
+    margin-top: 5px;
+}

@@ -1,0 +1,25 @@
+.all-recipes-image img {
+    width: 250px;
+    border: 10px solid indianred;
+    border-radius: 10px;
+}
+
+.all-recipes {
+    border: 2px solid indianred;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 480px;
+    padding: 10px;
+}
+
+.all-recipes-stats {
+    padding-left: 30px;
+    line-height: 43px;
+    font-size: 14px;
+}
+
+.recipes-list {
+    display: flex;
+    justify-content: space-evenly;
+}

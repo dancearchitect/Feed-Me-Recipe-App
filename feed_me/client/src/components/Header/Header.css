@@ -1,0 +1,30 @@
+.home-logo {
+    width: 60px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.header {
+    background-color: indianred;
+    padding-bottom: 5px;
+}
+
+.header-logo {
+    width: 70px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -28px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
