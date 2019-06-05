@@ -32,7 +32,7 @@ Recipe.create(
     cuisine: "Chicken",
     region: "Japan",
     cook_time: "60 minutes",
-    ingredients: ["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "brown rice"],
+    ingredients: ["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"],
     measurements: ["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"],
     servings: "4",
     instructions: "Preheat oven to 350° F. Spray a 9x13-inch baking pan with non-stick spray. Combine soy sauce, ½ cup water, brown sugar, ginger and garlic in a small saucepan and cover. 
@@ -45,5 +45,3 @@ Recipe.create(
     user_id: 1
 )
 
-# Cuisine.create( cuisine_type: "Vegetarian" )
-# Cuisine.create( cuisine_type: "Chicken" )

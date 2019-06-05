@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import "./CuisinesList.css";
 
 class CuisinesList extends Component {
   constructor() {
@@ -24,7 +26,16 @@ class CuisinesList extends Component {
       return (
         <div className="cuisines" key={recipe.id}>
           <div className="all-cuisines">
-            <h3>{recipe.cuisine}</h3>
+            <h3>
+              <Link
+                to={{
+                  pathname: `/cuisines/${recipe.cuisine}`,
+                  state: recipe
+                }}
+              >
+                {recipe.cuisine}
+              </Link>
+            </h3>
           </div>
         </div>
       );
@@ -34,7 +45,7 @@ class CuisinesList extends Component {
   render() {
     return (
       <div>
-        <h1>CuisinesList</h1>
+        <h1>Cuisines List</h1>
         <div className="cuisines-list">
           {this.state.apiDataLoaded ? (
             this.showAllCuisinesOnPage()

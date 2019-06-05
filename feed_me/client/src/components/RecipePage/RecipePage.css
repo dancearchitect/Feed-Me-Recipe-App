@@ -1,6 +1,8 @@
 .recipe-page-image {
   width: 28vw;
   height: 32vw;
+  border: 5px solid indianred;
+  border-radius: 5px;
 }
 
 .recipe-page {
@@ -24,20 +26,11 @@
   align-items: center;
 }
 
-/* .ingredients {
-      display: flex;
-      justify-content: flex-start;
-  }
-
-  .measurements {
-      display: flex;
-      justify-content: flex-end;
-  } */
-
 .ingred-measure-container {
   display: flex;
   flex-direction: column;
   width: 15vw;
+  font-size: 14px;
 }
 
 .instructions {
@@ -45,6 +38,9 @@
   justify-content: baseline;
   line-height: 30px;
   text-align: left;
+  font-size: 16px;
+  border: 2px solid indianred;
+  padding: 5px;
 }
 
 .recipe-page-stats {

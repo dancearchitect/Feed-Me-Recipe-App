@@ -13,19 +13,25 @@ class AllRecipes extends Component {
   }
 
   componentDidMount = async () => {
-    this.fetchAllRecipies()
+    const { apiData } = this.state;
+    if (apiData === null) {
+      this.fetchAllRecipies();
+    } else {
+      await this.setState({
+        apiData
+      });
+    }
   };
 
   fetchAllRecipies = async () => {
     const recipes = await axios.get("http://localhost:4567/recipes");
     const apiData = recipes.data;
+    this.props.setData(apiData);
     this.setState({
       apiData,
       apiDataLoaded: true
     });
-  }
-
-
+  };
 
   showAllRecipesOnPage() {
     return this.state.apiData.map(recipe => {

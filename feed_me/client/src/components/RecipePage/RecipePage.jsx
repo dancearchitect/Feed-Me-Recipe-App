@@ -44,50 +44,61 @@ class RecipePage extends Component {
           </div>
           <div className="recipe-page-column">
             <div className="ingred-measure-container">
-
               <p>
-                {this.props.location.state.ingredients[0]} {this.props.location.state.measurements[0]}
+                {this.props.location.state.measurements[0]}{" "}
+                {this.props.location.state.ingredients[0]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[1]} {this.props.location.state.measurements[1]}
+                {this.props.location.state.measurements[1]}{" "}
+                {this.props.location.state.ingredients[1]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[2]} {this.props.location.state.measurements[2]}
+                {this.props.location.state.measurements[2]}{" "}
+                {this.props.location.state.ingredients[2]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[3]} {this.props.location.state.measurements[3]}
+                {this.props.location.state.measurements[3]}{" "}
+                {this.props.location.state.ingredients[3]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[4]} {this.props.location.state.measurements[4]}
+                {this.props.location.state.measurements[4]}{" "}
+                {this.props.location.state.ingredients[4]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[5]} {this.props.location.state.measurements[5]}
+                {this.props.location.state.measurements[5]}{" "}
+                {this.props.location.state.ingredients[5]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[6]} {this.props.location.state.measurements[6]}
+                {this.props.location.state.measurements[6]}{" "}
+                {this.props.location.state.ingredients[6]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[7]} {this.props.location.state.measurements[7]}
+                {this.props.location.state.measurements[7]}{" "}
+                {this.props.location.state.ingredients[7]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[8]} {this.props.location.state.measurements[8]}
+                {this.props.location.state.measurements[8]}{" "}
+                {this.props.location.state.ingredients[8]}
               </p>
 
               <p>
-                {this.props.location.state.ingredients[9]} {this.props.location.state.measurements[9]}
+                {this.props.location.state.measurements[9]}{" "}
+                {this.props.location.state.ingredients[9]}
               </p>
             </div>
           </div>
           <div className="recipe-page-column">
-            <p className="instructions">{this.props.location.state.instructions}</p>
+            <p className="instructions">
+              {this.props.location.state.instructions}
+            </p>
           </div>
         </div>
       </div>
@@ -97,9 +108,7 @@ class RecipePage extends Component {
   render() {
     return (
       <div className="App">
-        <div>
-          {this.showRecipeOnPage()}
-        </div>
+        <div>{this.showRecipeOnPage()}</div>
       </div>
     );
   }

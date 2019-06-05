@@ -11,7 +11,8 @@ class RecipesController < ActionController::API
 
     def create 
         @recipe = Recipe.new(recipe_params)
-
+        @recipe.ingredients = params[:ingredients]
+        @recipe.measurements = params[:measurements]
         if @recipe.save
             redirect_to recipe_path(@recipe)
         else
