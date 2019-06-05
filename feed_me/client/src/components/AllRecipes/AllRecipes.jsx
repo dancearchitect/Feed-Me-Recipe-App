@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./AllRecipes.css";
+import { Link } from "react-router-dom";
 
 class AllRecipes extends Component {
   constructor() {
@@ -12,29 +13,43 @@ class AllRecipes extends Component {
   }
 
   componentDidMount = async () => {
+    this.fetchAllRecipies()
+  };
+
+  fetchAllRecipies = async () => {
     const recipes = await axios.get("http://localhost:4567/recipes");
     const apiData = recipes.data;
     this.setState({
       apiData,
       apiDataLoaded: true
     });
-  };
+  }
+
+
 
   showAllRecipesOnPage() {
     return this.state.apiData.map(recipe => {
       return (
-          <div className="all-recipes" key={recipe.id}>
-            <h3 className="all-recipes-image">
+        <div className="all-recipes" key={recipe.id}>
+          <h3 className="all-recipes-image">
+            <Link
+              to={{
+                pathname: `/recipe/${recipe.id}`,
+                state: recipe
+              }}
+            >
+              {" "}
               <img src={recipe.meal_image} alt="meal" />
-            </h3>
-            <div className="all-recipes-stats">
-              <p>{recipe.name}</p>
-              <p>Cuisine: {recipe.cuisine}</p>
-              <p>Region: {recipe.region}</p>
-              <p>Cook Time: {recipe.cook_time}</p>
-              <p>Servings: {recipe.servings}</p>
-            </div>
+            </Link>
+          </h3>
+          <div className="all-recipes-stats">
+            <p>{recipe.name}</p>
+            <p>Cuisine: {recipe.cuisine}</p>
+            <p>Region: {recipe.region}</p>
+            <p>Cook Time: {recipe.cook_time}</p>
+            <p>Servings: {recipe.servings}</p>
           </div>
+        </div>
       );
     });
   }

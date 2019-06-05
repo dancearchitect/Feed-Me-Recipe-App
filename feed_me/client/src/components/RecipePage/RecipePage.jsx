@@ -7,76 +7,98 @@ class RecipePage extends Component {
     super();
     this.state = {
       apiData: null,
-      apiDataLoaded: false
+      apiDataLoaded: false,
+      recipe: {}
     };
   }
+  fetchRecipe = async recipe_id => {
+    const recipe = await axios.get(
+      `http://localhost:3000/recipes/${recipe_id}`
+    );
+    this.setState({ recipe: recipe.data });
+    return recipe.data;
+  };
 
   componentDidMount = async () => {
-    const recipes = await axios.get("http://localhost:4567/recipes");
-    const apiData = recipes.data;
-    this.setState({
-      apiData,
-      apiDataLoaded: true
-    });
+    this.fetchRecipe(this.props.location.state);
   };
 
   showRecipeOnPage() {
-    return this.state.apiData.map(recipe => {
-      return (
-        <div className="recipe-page" key={recipe.id}>
-          <div className="recipe-page-row">
-            <div className="recipe-page-column">
-              <h3>{recipe.name}</h3>
+    return (
+      <div className="recipe-page" key={this.props.location.state.id}>
+        <div className="recipe-page-row">
+          <div className="recipe-page-column">
+            <h3>{this.props.location.state.name}</h3>
 
-              <img
-                src={recipe.meal_image}
-                alt="pasta"
-                className="recipe-page-image"
-              />
-              <div className="recipe-page-stats">
-              <p>Region: {recipe.region}</p>
-              <p>Cuisine: {recipe.cuisine}</p>
-              <p>Cook Time: {recipe.cook_time}</p>
-              <p>Servings: {recipe.servings}</p>
-            </div>
-            </div>
-            <div className="recipe-page-column">
-              <div className="ingred-measure-container">
-                <p className="ingredients">{recipe.ingredients[0]} {recipe.measurements[0]}</p>
-
-                <p className="ingredients">{recipe.ingredients[1]} {recipe.measurements[1]}</p>
-
-                <p className="ingredients">{recipe.ingredients[2]} {recipe.measurements[2]}</p>
-
-                <p className="ingredients">{recipe.ingredients[3]} {recipe.measurements[3]}</p>
-
-                <p className="ingredients">{recipe.ingredients[4]} {recipe.measurements[4]}</p>
-
-                <p className="ingredients">{recipe.ingredients[5]} {recipe.measurements[5]}</p>
-
-                <p className="ingredients">{recipe.ingredients[6]} {recipe.measurements[6]}</p>
-
-                <p className="ingredients">{recipe.ingredients[7]} {recipe.measurements[7]}</p>
-
-                <p className="ingredients">{recipe.ingredients[8]} {recipe.measurements[8]}</p>
-
-                <p className="ingredients">{recipe.ingredients[9]} {recipe.measurements[9]}</p>
-              </div>
-            </div>
-            <div className="recipe-page-column">
-              <p className="instructions">{recipe.instructions}</p>
+            <img
+              src={this.props.location.state.meal_image}
+              alt="pasta"
+              className="recipe-page-image"
+            />
+            <div className="recipe-page-stats">
+              <p>Region: {this.props.location.state.region}</p>
+              <p>Cuisine: {this.props.location.state.cuisine}</p>
+              <p>Cook Time: {this.props.location.state.cook_time}</p>
+              <p>Servings: {this.props.location.state.servings}</p>
             </div>
           </div>
+          <div className="recipe-page-column">
+            <div className="ingred-measure-container">
+
+              <p>
+                {this.props.location.state.ingredients[0]} {this.props.location.state.measurements[0]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[1]} {this.props.location.state.measurements[1]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[2]} {this.props.location.state.measurements[2]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[3]} {this.props.location.state.measurements[3]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[4]} {this.props.location.state.measurements[4]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[5]} {this.props.location.state.measurements[5]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[6]} {this.props.location.state.measurements[6]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[7]} {this.props.location.state.measurements[7]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[8]} {this.props.location.state.measurements[8]}
+              </p>
+
+              <p>
+                {this.props.location.state.ingredients[9]} {this.props.location.state.measurements[9]}
+              </p>
+            </div>
+          </div>
+          <div className="recipe-page-column">
+            <p className="instructions">{this.props.location.state.instructions}</p>
+          </div>
         </div>
-      );
-    });
+      </div>
+    );
   }
 
   render() {
     return (
       <div className="App">
         <div>
-          {this.state.apiDataLoaded ? this.showRecipeOnPage() : <p>:(</p>}
+          {this.showRecipeOnPage()}
         </div>
       </div>
     );

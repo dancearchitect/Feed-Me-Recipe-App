@@ -4,7 +4,10 @@ class RecipesController < ActionController::API
         render json: @recipes, status: :ok
     end
 
-    def
+    def show
+        @recipe = Recipe.find(params[:id])
+        render json: @recipe, status: :ok
+    end
 
     def create 
         @recipe = Recipe.new(recipe_params)
@@ -17,7 +20,7 @@ class RecipesController < ActionController::API
     end
 
     def update
-        @recipe = recipe.find(params[:id])
+        @recipe = Recipe.find(params[:id])
     
         if @recipe.update(recipe_params)
           render json: @recipe, status: :ok

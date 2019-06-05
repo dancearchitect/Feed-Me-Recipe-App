@@ -9,6 +9,7 @@ import RecipePage from "../../components/RecipePage/RecipePage";
 import Cuisines from "../Cuisines/CuisinesList";
 import Region from "../../components/Region/Region";
 import CreateRecipe from "../../components/CreateRecipe/CreateRecipe";
+import Recipe from "../../components/RecipePage/Recipe"
 
 class Header extends Component {
   render() {
@@ -31,10 +32,10 @@ class Header extends Component {
               <Link to="/regions">Regions</Link>
             </li>
             <li>
-              <Link to="/createrecipe">Create A Recipe</Link>
+              <Link to="/new">Create A Recipe</Link>
             </li>
             <li>
-              <Link to="/recipe">Recipe Page</Link>
+              <Link to="/recipes">Recipe Page</Link>
             </li>
           </nav>
         </div>
@@ -42,8 +43,8 @@ class Header extends Component {
           <Route path="/recipes" render={() => <AllRecipes />} />
           <Route path="/cuisines" render={() => <Cuisines />} />
           <Route path="/regions" render={() => <Region />} />
-          <Route path="/recipe" render={() => <RecipePage />} />
-          <Route path="/createrecipe" render={() => <CreateRecipe />} />
+          <Route path="/recipe/:id" render={(props) => <RecipePage {...props}/>} />
+          <Route path="/new" render={() => <CreateRecipe />} />
         </Switch>
       </div>
     );
