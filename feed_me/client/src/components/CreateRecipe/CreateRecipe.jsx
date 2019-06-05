@@ -55,31 +55,226 @@ class CreateRecipe extends Component {
   };
 
   render() {
-      const { name, meal_image, cuisine, region, cook_time, servings, ingredients, measurements, instructions} = this.state
+    const {
+      name,
+      meal_image,
+      cuisine,
+      region,
+      cook_time,
+      servings,
+      ingredients,
+      measurements,
+      instructions
+    } = this.state;
     return (
       <div>
         <h1>Create Recipe</h1>
         <div className="create-recipe-form">
-          <form className="create-recipe-form" onSubmit={this.createRecipeSubmit}>
+          
+          <form onSubmit={this.createRecipeSubmit}>
+            <div className="create-recipe-row">
+              <div className="create-recipe-column">
             <label>Name</label>
-            <input type="text" name="name" onChange={this.handleFormChange}/>
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleFormChange}
+            />
             <label>Cuisine</label>
-            <input type="text" name="cuisine" onChange={this.handleFormChange}/>
+            <input
+              type="text"
+              name="cuisine"
+              value={cuisine}
+              onChange={this.handleFormChange}
+            />
             <label>Region</label>
-            <input type="text" name="region" onChange={this.handleFormChange}/>
+            <input
+              type="text"
+              name="region"
+              value={region}
+              onChange={this.handleFormChange}
+            />
             <label>Cook Time</label>
-            <input type="text" name="cooktime" onChange={this.handleFormChange}/>
+            <input
+              type="text"
+              name="cooktime"
+              value={cook_time}
+              onChange={this.handleFormChange}
+            />
             <label>Servings</label>
-            <input type="text" name="servings" onChange={this.handleFormChange}/>
-            <label>Ingredient</label>
-            <input type="text" name="ingredients" onChange={this.handleFormChange}/>
-            <label>Measurement</label>
-            <input type="text" name="measurements" onChange={this.handleFormChange}/>
-
+            <input
+              type="text"
+              name="servings"
+              value={servings}
+              onChange={this.handleFormChange}
+            />
+            <label>Image</label>
+            <input
+              type="text"
+              name="image"
+              value={meal_image}
+              onChange={this.handleFormChange}
+            />
+            </div>
+            <div className="create-recipe-column">
+            <label>Ingredient 1</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 1</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            <label>Ingredient 2</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 2</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            <label>Ingredient 3</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 3</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            <label>Ingredient 4</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 4</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            <label>Ingredient 5</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 5</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            </div>
+            <div className="create-recipe-column">
+            <label>Ingredient 6</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 6</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            <label>Ingredient 7</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 7</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            <label>Ingredient 8</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 8</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            <label>Ingredient 9</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 9</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            <label>Ingredient 10</label>
+            <input
+              type="text"
+              name="ingredients"
+              value={ingredients}
+              onChange={this.handleFormChange}
+            />
+            <label>Measurement 10</label>
+            <input
+              type="text"
+              name="measurements"
+              value={measurements}
+              onChange={this.handleFormChange}
+            />
+            </div>
+            <div className="create-recipe-instruc">
             <label>Instructions</label>
-            <textarea rows="5" columns="20" name="instructions" onChange={this.handleFormChange}/>
-
+            <textarea
+              rows="10"
+              columns="200"
+              name="instructions"
+              value={instructions}
+              onChange={this.handleFormChange}
+            />
+            </div>
+          </div>
+          <div className="create-recipe-button">
             <button type="submit">Create Recipe!</button>
+            </div>
           </form>
         </div>
       </div>

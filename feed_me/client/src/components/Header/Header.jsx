@@ -9,7 +9,6 @@ import RecipePage from "../../components/RecipePage/RecipePage";
 import Cuisines from "../Cuisines/CuisinesList";
 import Region from "../../components/Region/Region";
 import CreateRecipe from "../../components/CreateRecipe/CreateRecipe";
-import Recipe from "../../components/RecipePage/Recipe"
 
 class Header extends Component {
   render() {
