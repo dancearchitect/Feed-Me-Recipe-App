@@ -45,53 +45,53 @@ class RecipePage extends Component {
           <div className="recipe-page-column">
             <div className="ingred-measure-container">
               <p>
-                {this.props.location.state.measurements[0]}{" "}
-                {this.props.location.state.ingredients[0]}
+                <b>{this.props.location.state.measurements1}</b>{" "}
+                {this.props.location.state.ingredients1}
               </p>
 
               <p>
-                {this.props.location.state.measurements[1]}{" "}
-                {this.props.location.state.ingredients[1]}
+                <b>{this.props.location.state.measurements2}</b>{" "}
+                {this.props.location.state.ingredients2}
               </p>
 
               <p>
-                {this.props.location.state.measurements[2]}{" "}
-                {this.props.location.state.ingredients[2]}
+                <b>{this.props.location.state.measurements3}</b>{" "}
+                {this.props.location.state.ingredients3}
               </p>
 
               <p>
-                {this.props.location.state.measurements[3]}{" "}
-                {this.props.location.state.ingredients[3]}
+                <b>{this.props.location.state.measurements4}</b>{" "}
+                {this.props.location.state.ingredients4}
               </p>
 
               <p>
-                {this.props.location.state.measurements[4]}{" "}
-                {this.props.location.state.ingredients[4]}
+                <b>{this.props.location.state.measurements5}</b>{" "}
+                {this.props.location.state.ingredients5}
               </p>
 
               <p>
-                {this.props.location.state.measurements[5]}{" "}
-                {this.props.location.state.ingredients[5]}
+                <b>{this.props.location.state.measurements6}</b>{" "}
+                {this.props.location.state.ingredients6}
               </p>
 
               <p>
-                {this.props.location.state.measurements[6]}{" "}
-                {this.props.location.state.ingredients[6]}
+                <b>{this.props.location.state.measurements7}</b>{" "}
+                {this.props.location.state.ingredients7}
               </p>
 
               <p>
-                {this.props.location.state.measurements[7]}{" "}
-                {this.props.location.state.ingredients[7]}
+                <b>{this.props.location.state.measurements8}</b>{" "}
+                {this.props.location.state.ingredients8}
               </p>
 
               <p>
-                {this.props.location.state.measurements[8]}{" "}
-                {this.props.location.state.ingredients[8]}
+                <b>{this.props.location.state.measurements9}</b>{" "}
+                {this.props.location.state.ingredients9}
               </p>
 
               <p>
-                {this.props.location.state.measurements[9]}{" "}
-                {this.props.location.state.ingredients[9]}
+                <b>{this.props.location.state.measurements10}</b>{" "}
+                {this.props.location.state.ingredients10}
               </p>
             </div>
           </div>

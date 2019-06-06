@@ -8369,3 +8369,2581 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 ActiveRecord::SerializationTypeMismatch (can't serialize `ingredients`: was supposed to be a Array, but was a String. -- "efef"):
   
 app/controllers/recipes_controller.rb:13:in `create'
+Started POST "/recipes" for 127.0.0.1 at 2019-06-05 18:06:29 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	
+	 "name": "Tcccc",
+    "meal_image": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
+    "cuisine": "Chicccccken",
+    "region": "Japan",
+    "cook_time": "60 minutes",
+    "ingredients": ["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"],
+    "measurements": ["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"],
+    "servings": "4",
+    "instructions": "Preheat o"    "user_id": 1
+
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+	
+	 "name": "Tcccc",
+    "meal_image": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
+    "cuisine": "Chicccccken",
+    "region": "Japan",
+    "cook_time": "60 minutes",
+    "ingredients": ["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"],
+    "measurements": ["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"],
+    "servings": "4",
+    "instructions": "Preheat o"    "user_id": 1
+
+}'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/recipes" for 127.0.0.1 at 2019-06-05 18:06:39 -0400
+Processing by RecipesController#create as */*
+  Parameters: {"name"=>"Tcccc", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Chicccccken", "region"=>"Japan", "cook_time"=>"60 minutes", "ingredients"=>["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"], "measurements"=>["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"], "servings"=>"4", "instructions"=>"Preheat o", "user_id"=>1, "recipe"=>{"name"=>"Tcccc", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Chicccccken", "region"=>"Japan", "cook_time"=>"60 minutes", "ingredients"=>["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"], "measurements"=>["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"], "servings"=>"4", "instructions"=>"Preheat o", "user_id"=>1}}
+Unpermitted parameters: :ingredients, :measurements
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (40.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients", "measurements", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Tcccc"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Chicccccken"], ["region", "Japan"], ["cook_time", "60 minutes"], ["ingredients", "---\n- soy sauce\n- water\n- brown sugar\n- ground ginger\n- minced garlic\n- cornstarch\n- chicken breast\n- stir fry vegetables\n- brown rice\n"], ["measurements", "---\n- 3/4 cup\n- 1/2 cup\n- 1/4 cup\n- 1/2 teaspoon\n- 1/2 teaspoon\n- 4 tablespoons\n- '2'\n- 1 (12 oz)\n- 3 cups\n"], ["servings", "4"], ["instructions", "Preheat o"], ["created_at", "2019-06-05 22:06:39.258851"], ["updated_at", "2019-06-05 22:06:39.258851"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:3000/recipes/17
+Completed 302 Found in 65ms (ActiveRecord: 43.0ms)
+
+
+Started GET "/recipes/17" for 127.0.0.1 at 2019-06-05 18:06:39 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 18:08:32 -0400
+Started POST "/recipes" for ::1 at 2019-06-05 18:08:32 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"name"=>"dancearchitect", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Dessert", "region"=>"New York", "cook_time"=>"wfn", "servings"=>"4", "ingredients"=>["sssss"], "measurements"=>["ggggg"], "instructions"=>"aaaaa", "user_id"=>1}}
+Unpermitted parameters: :ingredients, :measurements
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "dancearchitect"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Dessert"], ["region", "New York"], ["cook_time", "wfn"], ["servings", "4"], ["instructions", "aaaaa"], ["created_at", "2019-06-05 22:08:32.413193"], ["updated_at", "2019-06-05 22:08:32.413193"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/18
+Completed 302 Found in 47ms (ActiveRecord: 41.9ms)
+
+
+Started OPTIONS "/recipes/18" for ::1 at 2019-06-05 18:08:32 -0400
+Started GET "/recipes/18" for ::1 at 2019-06-05 18:08:32 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"18", "recipe"=>{}}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2019-06-05 18:09:27 -0400
+Processing by RecipesController#create as */*
+  Parameters: {"name"=>"Tcccc", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Chicccccken", "region"=>"Japan", "cook_time"=>"60 minutes", "ingredients"=>["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"], "measurements"=>["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"], "servings"=>"4", "instructions"=>"Preheat o", "user_id"=>1, "recipe"=>{"name"=>"Tcccc", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Chicccccken", "region"=>"Japan", "cook_time"=>"60 minutes", "ingredients"=>["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"], "measurements"=>["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"], "servings"=>"4", "instructions"=>"Preheat o", "user_id"=>1}}
+Unpermitted parameters: :ingredients, :measurements
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (43.2ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients", "measurements", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Tcccc"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Chicccccken"], ["region", "Japan"], ["cook_time", "60 minutes"], ["ingredients", "---\n- soy sauce\n- water\n- brown sugar\n- ground ginger\n- minced garlic\n- cornstarch\n- chicken breast\n- stir fry vegetables\n- brown rice\n"], ["measurements", "---\n- 3/4 cup\n- 1/2 cup\n- 1/4 cup\n- 1/2 teaspoon\n- 1/2 teaspoon\n- 4 tablespoons\n- '2'\n- 1 (12 oz)\n- 3 cups\n"], ["servings", "4"], ["instructions", "Preheat o"], ["created_at", "2019-06-05 22:09:27.362937"], ["updated_at", "2019-06-05 22:09:27.362937"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:3000/recipes/19
+Completed 302 Found in 57ms (ActiveRecord: 49.3ms)
+
+
+Started GET "/recipes/19" for 127.0.0.1 at 2019-06-05 18:09:27 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/recipes" for ::1 at 2019-06-05 18:11:17 -0400
+Processing by RecipesController#create as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: recipe):
+  
+app/controllers/recipes_controller.rb:41:in `recipe_params'
+app/controllers/recipes_controller.rb:13:in `create'
+Started POST "/recipes" for ::1 at 2019-06-05 18:11:44 -0400
+Processing by RecipesController#create as HTML
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: recipe):
+  
+app/controllers/recipes_controller.rb:41:in `recipe_params'
+app/controllers/recipes_controller.rb:13:in `create'
+Started POST "/recipes" for ::1 at 2019-06-05 18:12:44 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"name"=>"dancearchitect", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Dessert", "region"=>"New York", "cook_time"=>"wfn", "servings"=>"4", "ingredients"=>["sssss", "hhh"], "measurements"=>["ggggg", "hbbh"], "instructions"=>"zzzz", "user_id"=>1}}
+Unpermitted parameters: :ingredients, :measurements
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (41.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "dancearchitect"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Dessert"], ["region", "New York"], ["cook_time", "wfn"], ["servings", "4"], ["instructions", "zzzz"], ["created_at", "2019-06-05 22:12:44.513199"], ["updated_at", "2019-06-05 22:12:44.513199"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/20
+Completed 302 Found in 47ms (ActiveRecord: 42.4ms)
+
+
+Started OPTIONS "/recipes/20" for ::1 at 2019-06-05 18:12:44 -0400
+Started GET "/recipes/20" for ::1 at 2019-06-05 18:12:44 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"20", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes" for ::1 at 2019-06-05 18:13:58 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"name"=>"dancearchitect", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Dessert", "region"=>"New York", "cook_time"=>"wfn", "servings"=>"4", "ingredients"=>["sssss", "hhh"], "instructions"=>"zzzz", "user_id"=>1}}
+Unpermitted parameter: :ingredients
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "dancearchitect"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Dessert"], ["region", "New York"], ["cook_time", "wfn"], ["servings", "4"], ["instructions", "zzzz"], ["created_at", "2019-06-05 22:13:58.468308"], ["updated_at", "2019-06-05 22:13:58.468308"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/21
+Completed 302 Found in 46ms (ActiveRecord: 41.2ms)
+
+
+Started OPTIONS "/recipes/21" for ::1 at 2019-06-05 18:13:58 -0400
+Started GET "/recipes/21" for ::1 at 2019-06-05 18:13:58 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"21", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 18:18:56 -0400
+Started POST "/recipes" for ::1 at 2019-06-05 18:18:56 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"name"=>"kqejnrge", "meal_image"=>"gowfq", "cuisine"=>"ewkjnfw", "region"=>"wefje", "cook_time"=>"fwkjeq", "servings"=>"wgore", "ingredients"=>["sssss", "hhh"], "instructions"=>"vbnvnb", "user_id"=>1}}
+Unpermitted parameter: :ingredients
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "kqejnrge"], ["meal_image", "gowfq"], ["cuisine", "ewkjnfw"], ["region", "wefje"], ["cook_time", "fwkjeq"], ["servings", "wgore"], ["instructions", "vbnvnb"], ["created_at", "2019-06-05 22:18:56.247515"], ["updated_at", "2019-06-05 22:18:56.247515"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/22
+Completed 302 Found in 46ms (ActiveRecord: 41.5ms)
+
+
+Started OPTIONS "/recipes/22" for ::1 at 2019-06-05 18:18:56 -0400
+Started GET "/recipes/22" for ::1 at 2019-06-05 18:18:56 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"22", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 18:21:17 -0400
+Started POST "/recipes" for ::1 at 2019-06-05 18:21:17 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"wrfgretl", "meal_image"=>"emvkdf", "cuisine"=>"kjefnwds", "region"=>"fegjrnk", "cook_time"=>"gjkrenf", "servings"=>"efjgekr", "ingredients"=>["sssss", "hhh"], "instructions"=>"erkjf", "user_id"=>1}}
+Unpermitted parameter: :ingredients
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "wrfgretl"], ["meal_image", "emvkdf"], ["cuisine", "kjefnwds"], ["region", "fegjrnk"], ["cook_time", "gjkrenf"], ["servings", "efjgekr"], ["instructions", "erkjf"], ["created_at", "2019-06-05 22:21:17.812103"], ["updated_at", "2019-06-05 22:21:17.812103"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/23
+Completed 302 Found in 47ms (ActiveRecord: 42.2ms)
+
+
+Started OPTIONS "/recipes/23" for ::1 at 2019-06-05 18:21:17 -0400
+Started GET "/recipes/23" for ::1 at 2019-06-05 18:21:17 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"23", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipes" for ::1 at 2019-06-05 18:28:40 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"wffadfaw", "meal_image"=>"fwfewfeaw", "cuisine"=>"fwefaew", "region"=>"fwefaw", "cook_time"=>"fwefew", "servings"=>"afeaw", "instructions"=>"fwefewfwe", "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.7ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "wffadfaw"], ["meal_image", "fwfewfeaw"], ["cuisine", "fwefaew"], ["region", "fwefaw"], ["cook_time", "fwefew"], ["servings", "afeaw"], ["instructions", "fwefewfwe"], ["created_at", "2019-06-05 22:28:40.162803"], ["updated_at", "2019-06-05 22:28:40.162803"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (41.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/24
+Completed 302 Found in 47ms (ActiveRecord: 42.8ms)
+
+
+Started OPTIONS "/recipes/24" for ::1 at 2019-06-05 18:28:40 -0400
+Started GET "/recipes/24" for ::1 at 2019-06-05 18:28:40 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"24", "recipe"=>{}}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 18:29:27 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/gowfq" for 127.0.0.1 at 2019-06-05 18:29:27 -0400
+Started GET "/emvkdf" for 127.0.0.1 at 2019-06-05 18:29:27 -0400
+Started GET "/fwfewfeaw" for 127.0.0.1 at 2019-06-05 18:29:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/gowfq"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/emvkdf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/fwfewfeaw"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (45.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (7756.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (212.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (219.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (568.0ms)[0m  [1m[35mCREATE DATABASE "feed_me_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (388.2ms)[0m  [1m[35mCREATE DATABASE "feed_me_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients" text, "measurements" text, "servings" character varying, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_recipes_on_user_id" ON "recipes"  ("user_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190603201910)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603194856),
+(20190603185713);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 22:30:13.237520"], ["updated_at", "2019-06-05 22:30:13.237520"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients" text, "measurements" text, "servings" character varying, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_recipes_on_user_id" ON "recipes"  ("user_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190603201910)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603194856),
+(20190603185713);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 22:30:13.336247"], ["updated_at", "2019-06-05 22:30:13.336247"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-05 22:30:13.342701"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "rachelgonzo"], ["created_at", "2019-06-05 22:30:13.374624"], ["updated_at", "2019-06-05 22:30:13.374624"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mRecipe Create (0.6ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients", "measurements", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Spicy Arrabiata Penne"], ["meal_image", "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"], ["cuisine", "Vegetarian"], ["region", "Italy"], ["cook_time", "30 minutes"], ["ingredients", "---\n- penne rigate\n- olive oil\n- garlic\n- chopped tomatoes\n- red chile\n- italian seasoning\n- basil\n- parmigiano-reggiano\n"], ["measurements", "---\n- 1 pound\n- 1/4 cup\n- 3 cloves\n- 1 tin\n- 1/2 teaspoon\n- 1/2 teaspoon\n- 6 leaves\n- sprinkle\n"], ["servings", "4"], ["instructions", "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, \n    about 9 minutes. In a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, \n    until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. \n    Remove from the heat and add the chopped basil. Drain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm."], ["created_at", "2019-06-05 22:30:13.457128"], ["updated_at", "2019-06-05 22:30:13.457128"], ["user_id", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients", "measurements", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Teriyaki Chicken Casserole"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Chicken"], ["region", "Japan"], ["cook_time", "60 minutes"], ["ingredients", "---\n- soy sauce\n- water\n- brown sugar\n- ground ginger\n- minced garlic\n- cornstarch\n- chicken breast\n- stir fry vegetables\n- brown rice\n"], ["measurements", "---\n- 3/4 cup\n- 1/2 cup\n- 1/4 cup\n- 1/2 teaspoon\n- 1/2 teaspoon\n- 4 tablespoons\n- '2'\n- 1 (12 oz)\n- 3 cups\n"], ["servings", "4"], ["instructions", "Preheat oven to 350° F. Spray a 9x13-inch baking pan with non-stick spray. Combine soy sauce, ½ cup water, brown sugar, ginger and garlic in a small saucepan and cover. \n    Bring to a boil over medium heat. Remove lid and cook for one minute once boiling. Meanwhile, stir together the corn starch and 2 tablespoons of water in a separate dish until smooth. \n    Once sauce is boiling, add mixture to the saucepan and stir to combine. Cook until the sauce starts to thicken then remove from heat. Place the chicken breasts in the prepared pan. \n    Pour one cup of the sauce over top of chicken. Place chicken in oven and bake 35 minutes or until cooked through. Remove from oven and shred chicken in the dish using two forks. *Meanwhile, \n    steam or cook the vegetables according to package directions. Add the cooked vegetables and rice to the casserole dish with the chicken. Add most of the remaining sauce, reserving a bit to \n    drizzle over the top when serving. Gently toss everything together in the casserole dish until combined. Return to oven and cook 15 minutes. Remove from oven and let stand 5 minutes before serving. \n    Drizzle each serving with remaining sauce. Enjoy!"], ["created_at", "2019-06-05 22:30:13.502887"], ["updated_at", "2019-06-05 22:30:13.502887"], ["user_id", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 18:30:29 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rachelgonzalez/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/recipes" for ::1 at 2019-06-05 18:30:29 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 33ms (Views: 21.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 18:30:32 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes" for ::1 at 2019-06-05 18:30:34 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (2.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 2.0ms)
+
+
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 18:30:58 -0400
+Started POST "/recipes" for ::1 at 2019-06-05 18:30:58 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"dancearchitect", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Dessert", "region"=>"New York", "cook_time"=>"wfn", "servings"=>"4", "instructions"=>"qwefwgrthyuj", "user_id"=>1}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "dancearchitect"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Dessert"], ["region", "New York"], ["cook_time", "wfn"], ["servings", "4"], ["instructions", "qwefwgrthyuj"], ["created_at", "2019-06-05 22:30:58.557211"], ["updated_at", "2019-06-05 22:30:58.557211"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/3
+Completed 302 Found in 64ms (ActiveRecord: 44.2ms)
+
+
+Started OPTIONS "/recipes/3" for ::1 at 2019-06-05 18:30:58 -0400
+Started GET "/recipes/3" for ::1 at 2019-06-05 18:30:58 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"3", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes" for ::1 at 2019-06-05 18:31:26 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"", "meal_image"=>"", "cuisine"=>"", "region"=>"", "cook_time"=>"", "servings"=>"", "instructions"=>"", "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", ""], ["meal_image", ""], ["cuisine", ""], ["region", ""], ["cook_time", ""], ["servings", ""], ["instructions", ""], ["created_at", "2019-06-05 22:31:26.170831"], ["updated_at", "2019-06-05 22:31:26.170831"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/4
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started OPTIONS "/recipes/4" for ::1 at 2019-06-05 18:31:26 -0400
+Started GET "/recipes/4" for ::1 at 2019-06-05 18:31:26 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"4", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2019-06-05 18:32:41 -0400
+Processing by RecipesController#create as */*
+  Parameters: {"name"=>"Tcccc", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Chicccccken", "region"=>"Japan", "cook_time"=>"60 minutes", "ingredients"=>["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"], "measurements"=>["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"], "servings"=>"4", "instructions"=>"Preheat o", "user_id"=>1, "recipe"=>{"name"=>"Tcccc", "meal_image"=>"https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg", "cuisine"=>"Chicccccken", "region"=>"Japan", "cook_time"=>"60 minutes", "ingredients"=>["soy sauce", "water", "brown sugar", "ground ginger", "minced garlic", "cornstarch", "chicken breast", "stir fry vegetables", "brown rice"], "measurements"=>["3/4 cup", "1/2 cup", "1/4 cup", "1/2 teaspoon", "1/2 teaspoon", "4 tablespoons", "2", "1 (12 oz)", "3 cups"], "servings"=>"4", "instructions"=>"Preheat o", "user_id"=>1}}
+Unpermitted parameters: :ingredients, :measurements
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (6.2ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients", "measurements", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Tcccc"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Chicccccken"], ["region", "Japan"], ["cook_time", "60 minutes"], ["ingredients", "---\n- soy sauce\n- water\n- brown sugar\n- ground ginger\n- minced garlic\n- cornstarch\n- chicken breast\n- stir fry vegetables\n- brown rice\n"], ["measurements", "---\n- 3/4 cup\n- 1/2 cup\n- 1/4 cup\n- 1/2 teaspoon\n- 1/2 teaspoon\n- 4 tablespoons\n- '2'\n- 1 (12 oz)\n- 3 cups\n"], ["servings", "4"], ["instructions", "Preheat o"], ["created_at", "2019-06-05 22:32:41.853694"], ["updated_at", "2019-06-05 22:32:41.853694"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (41.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:3000/recipes/5
+Completed 302 Found in 59ms (ActiveRecord: 52.9ms)
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2019-06-05 18:32:41 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 18:32:47 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (1.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 18:32:55 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (1.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes" for ::1 at 2019-06-05 18:33:01 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 18:33:17 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 18:33:25 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 18:33:31 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (1.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.9ms)
+
+
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 18:41:00 -0400
+Started GET "/recipes" for ::1 at 2019-06-05 18:41:00 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 18:45:26 -0400
+  
+SyntaxError (/Users/rachelgonzalez/Desktop/sei/jeopardy/unit-04/projects/Feed-Me-Recipe-App/feed_me/app/controllers/recipes_controller.rb:41: syntax error, unexpected ',', expecting =>
+...:measurements => [], :servings, :instructions, :user_id)
+...                              ^):
+  
+app/controllers/recipes_controller.rb:41: syntax error, unexpected ',', expecting =>
+Started GET "/recipes" for ::1 at 2019-06-05 18:47:33 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 18:47:36 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-05 18:47:55 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 41ms (Views: 16.8ms | ActiveRecord: 21.4ms)
+
+
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 18:48:35 -0400
+Started POST "/recipes" for ::1 at 2019-06-05 18:48:35 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"rtiuyghefwjd", "meal_image"=>"egjer", "cuisine"=>"fwejod", "region"=>"eiurf", "cook_time"=>"vfnejw", "servings"=>"egknr", "ingredients"=>["sssss", "hhh"], "measurements"=>["ggggg", "hbbh"], "instructions"=>"fwirojnferifn", "user_id"=>1}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "rtiuyghefwjd"], ["meal_image", "egjer"], ["cuisine", "fwejod"], ["region", "eiurf"], ["cook_time", "vfnejw"], ["servings", "egknr"], ["instructions", "fwirojnferifn"], ["created_at", "2019-06-05 22:48:35.314293"], ["updated_at", "2019-06-05 22:48:35.314293"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/6
+Completed 302 Found in 63ms (ActiveRecord: 43.4ms)
+
+
+Started OPTIONS "/recipes/6" for ::1 at 2019-06-05 18:48:35 -0400
+Started GET "/recipes/6" for ::1 at 2019-06-05 18:48:35 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"6", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes" for ::1 at 2019-06-05 18:52:11 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"", "meal_image"=>"", "cuisine"=>"", "region"=>"", "cook_time"=>"", "servings"=>"", "ingredients"=>["sssss", "hhh"], "measurements"=>["ggggg", "hbbh"], "instructions"=>"", "user_id"=>1}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", ""], ["meal_image", ""], ["cuisine", ""], ["region", ""], ["cook_time", ""], ["servings", ""], ["instructions", ""], ["created_at", "2019-06-05 22:52:11.713596"], ["updated_at", "2019-06-05 22:52:11.713596"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/7
+Completed 302 Found in 47ms (ActiveRecord: 41.7ms)
+
+
+Started OPTIONS "/recipes/7" for ::1 at 2019-06-05 18:52:11 -0400
+Started GET "/recipes/7" for ::1 at 2019-06-05 18:52:11 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"7", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes" for ::1 at 2019-06-05 18:52:12 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"", "meal_image"=>"", "cuisine"=>"", "region"=>"", "cook_time"=>"", "servings"=>"", "ingredients"=>["sssss", "hhh"], "measurements"=>["ggggg", "hbbh"], "instructions"=>"", "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", ""], ["meal_image", ""], ["cuisine", ""], ["region", ""], ["cook_time", ""], ["servings", ""], ["instructions", ""], ["created_at", "2019-06-05 22:52:12.376146"], ["updated_at", "2019-06-05 22:52:12.376146"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/8
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started OPTIONS "/recipes/8" for ::1 at 2019-06-05 18:52:12 -0400
+Started GET "/recipes/8" for ::1 at 2019-06-05 18:52:12 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"8", "recipe"=>{}}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/recipes" for ::1 at 2019-06-05 18:52:14 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"", "meal_image"=>"", "cuisine"=>"", "region"=>"", "cook_time"=>"", "servings"=>"", "ingredients"=>["sssss", "hhh"], "measurements"=>["ggggg", "hbbh"], "instructions"=>"", "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", ""], ["meal_image", ""], ["cuisine", ""], ["region", ""], ["cook_time", ""], ["servings", ""], ["instructions", ""], ["created_at", "2019-06-05 22:52:14.394632"], ["updated_at", "2019-06-05 22:52:14.394632"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/9
+Completed 302 Found in 11ms (ActiveRecord: 6.4ms)
+
+
+Started OPTIONS "/recipes/9" for ::1 at 2019-06-05 18:52:14 -0400
+Started GET "/recipes/9" for ::1 at 2019-06-05 18:52:14 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"9", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 18:58:47 -0400
+  [1m[35m (54.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rachelgonzalez/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started POST "/recipes" for ::1 at 2019-06-05 18:58:48 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"{\"recipe\":{\"name\":\"asdf\",\"meal_image\":\"asdf\",\"cuisine\":\"asdf\",\"region\":\"asdf\",\"cook_time\":\"asdf\",\"servings\":\"asdf\",\"ingredients\":"=>{"\"sssss\",\"hhh\""=>{",\"measurements\":"=>{"\"ggggg\",\"hbbh\""=>{",\"instructions\":\"\",\"user_id\":1}}"=>nil}}}}}
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: recipe):
+  
+app/controllers/recipes_controller.rb:41:in `recipe_params'
+app/controllers/recipes_controller.rb:13:in `create'
+Started POST "/recipes" for ::1 at 2019-06-05 18:59:42 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"{\"name\":\"asf\",\"meal_image\":\"asdf\",\"cuisine\":\"asdf\",\"region\":\"asdf\",\"cook_time\":\"asdf\",\"servings\":\"asdf\",\"ingredients\":"=>{"\"sssss\",\"hhh\""=>{",\"measurements\":"=>{"\"ggggg\",\"hbbh\""=>{",\"instructions\":\"\",\"user_id\":1}"=>nil}}}}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: recipe):
+  
+app/controllers/recipes_controller.rb:41:in `recipe_params'
+app/controllers/recipes_controller.rb:13:in `create'
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 19:32:44 -0400
+Started GET "/recipes" for ::1 at 2019-06-05 19:32:44 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 69ms (Views: 59.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/egjer" for 127.0.0.1 at 2019-06-05 19:32:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:32:54 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:32:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 7ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:34:28 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:34:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (5.8ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 9ms (ActiveRecord: 7.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:34:32 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:34:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:34:34 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:34:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (4.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 7ms (ActiveRecord: 4.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:34:57 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:34:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (3.9ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 5ms (ActiveRecord: 3.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:35:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:35:01 -0400
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (8.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 16ms (ActiveRecord: 8.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:35:08 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:35:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:35:14 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:35:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (31.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 40ms (ActiveRecord: 31.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:35:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:35:31 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (32.9ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 34ms (ActiveRecord: 32.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipe/egjer" for 127.0.0.1 at 2019-06-05 19:35:59 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:35:59 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/egjer"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mRecipe Load (45.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 46ms (ActiveRecord: 45.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+  [1m[35m (23.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (25.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (225.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (204.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (519.5ms)[0m  [1m[35mCREATE DATABASE "feed_me_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (466.0ms)[0m  [1m[35mCREATE DATABASE "feed_me_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients" text, "measurements" text, "servings" character varying, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_recipes_on_user_id" ON "recipes"  ("user_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190603201910)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603194856),
+(20190603185713);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 23:53:34.060707"], ["updated_at", "2019-06-05 23:53:34.060707"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients" text, "measurements" text, "servings" character varying, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_recipes_on_user_id" ON "recipes"  ("user_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190603201910)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603194856),
+(20190603185713);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-05 23:53:34.162992"], ["updated_at", "2019-06-05 23:53:34.162992"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-05 23:53:34.167869"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "rachelgonzo"], ["created_at", "2019-06-05 23:53:34.241615"], ["updated_at", "2019-06-05 23:53:34.241615"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mRecipe Create (0.7ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients", "measurements", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Spicy Arrabiata Penne"], ["meal_image", "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"], ["cuisine", "Vegetarian"], ["region", "Italy"], ["cook_time", "30 minutes"], ["ingredients", "---\n- penne rigate\n- olive oil\n- garlic\n- chopped tomatoes\n- red chile\n- italian seasoning\n- basil\n- parmigiano-reggiano\n"], ["measurements", "---\n- 1 pound\n- 1/4 cup\n- 3 cloves\n- 1 tin\n- 1/2 teaspoon\n- 1/2 teaspoon\n- 6 leaves\n- sprinkle\n"], ["servings", "4"], ["instructions", "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, \n    about 9 minutes. In a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, \n    until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. \n    Remove from the heat and add the chopped basil. Drain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm."], ["created_at", "2019-06-05 23:53:34.276931"], ["updated_at", "2019-06-05 23:53:34.276931"], ["user_id", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients", "measurements", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Teriyaki Chicken Casserole"], ["meal_image", "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"], ["cuisine", "Chicken"], ["region", "Japan"], ["cook_time", "60 minutes"], ["ingredients", "---\n- soy sauce\n- water\n- brown sugar\n- ground ginger\n- minced garlic\n- cornstarch\n- chicken breast\n- stir fry vegetables\n- brown rice\n"], ["measurements", "---\n- 3/4 cup\n- 1/2 cup\n- 1/4 cup\n- 1/2 teaspoon\n- 1/2 teaspoon\n- 4 tablespoons\n- '2'\n- 1 (12 oz)\n- 3 cups\n"], ["servings", "4"], ["instructions", "Preheat oven to 350° F. Spray a 9x13-inch baking pan with non-stick spray. Combine soy sauce, ½ cup water, brown sugar, ginger and garlic in a small saucepan and cover. \n    Bring to a boil over medium heat. Remove lid and cook for one minute once boiling. Meanwhile, stir together the corn starch and 2 tablespoons of water in a separate dish until smooth. \n    Once sauce is boiling, add mixture to the saucepan and stir to combine. Cook until the sauce starts to thicken then remove from heat. Place the chicken breasts in the prepared pan. \n    Pour one cup of the sauce over top of chicken. Place chicken in oven and bake 35 minutes or until cooked through. Remove from oven and shred chicken in the dish using two forks. *Meanwhile, \n    steam or cook the vegetables according to package directions. Add the cooked vegetables and rice to the casserole dish with the chicken. Add most of the remaining sauce, reserving a bit to \n    drizzle over the top when serving. Gently toss everything together in the casserole dish until combined. Return to oven and cook 15 minutes. Remove from oven and let stand 5 minutes before serving. \n    Drizzle each serving with remaining sauce. Enjoy!"], ["created_at", "2019-06-05 23:53:34.322720"], ["updated_at", "2019-06-05 23:53:34.322720"], ["user_id", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+Started OPTIONS "/recipes" for ::1 at 2019-06-05 19:53:54 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rachelgonzalez/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/recipes" for ::1 at 2019-06-05 19:53:54 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 32ms (Views: 20.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-05 19:53:57 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes" for ::1 at 2019-06-05 19:54:10 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+Started OPTIONS "/recipes" for ::1 at 2019-06-06 09:06:29 -0400
+Started POST "/recipes" for ::1 at 2019-06-06 09:06:29 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"egeg", "meal_image"=>"getgr", "cuisine"=>"gerg", "region"=>"gege", "cook_time"=>"gerg", "servings"=>"ggeg", "ingredients1"=>"gerg", "ingredients2"=>[], "ingredients3"=>[], "ingredients4"=>[], "ingredients5"=>[], "ingredients6"=>[], "ingredients7"=>[], "ingredients8"=>[], "ingredients9"=>[], "ingredients10"=>[], "measurements1"=>"gertgr", "measurements2"=>[], "measurements3"=>[], "measurements4"=>[], "measurements5"=>[], "measurements6"=>[], "measurements7"=>[], "measurements8"=>[], "measurements9"=>[], "measurements10"=>[], "instructions"=>"gtevtertgvcertg", "user_id"=>1}}
+Unpermitted parameters: :ingredients1, :ingredients2, :ingredients3, :ingredients4, :ingredients5, :ingredients6, :ingredients7, :ingredients8, :ingredients9, :ingredients10, :measurements1, :measurements2, :measurements3, :measurements4, :measurements5, :measurements6, :measurements7, :measurements8, :measurements9, :measurements10
+  [1m[35m (42.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (43.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (47.0ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "egeg"], ["meal_image", "getgr"], ["cuisine", "gerg"], ["region", "gege"], ["cook_time", "gerg"], ["servings", "ggeg"], ["instructions", "gtevtertgvcertg"], ["created_at", "2019-06-06 13:06:29.499536"], ["updated_at", "2019-06-06 13:06:29.499536"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/3
+Completed 302 Found in 260ms (ActiveRecord: 186.2ms)
+
+
+Started OPTIONS "/recipes/3" for ::1 at 2019-06-06 09:06:29 -0400
+Started GET "/recipes/3" for ::1 at 2019-06-06 09:06:29 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"3", "recipe"=>{}}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 09:06:32 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/getgr" for 127.0.0.1 at 2019-06-06 09:06:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/getgr"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recipe/getgr" for 127.0.0.1 at 2019-06-06 09:06:35 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 09:06:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/getgr"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 4ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes" for ::1 at 2019-06-06 09:06:39 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/getgr" for 127.0.0.1 at 2019-06-06 09:06:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/getgr"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/recipes" for ::1 at 2019-06-06 09:09:00 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"wtvwce", "meal_image"=>"geertge", "cuisine"=>"vghvt", "region"=>"egege", "cook_time"=>"greg", "servings"=>"geg", "ingredients1"=>"terhtrehrt", "ingredients2"=>"grgeg", "ingredients3"=>"rgergew", "ingredients4"=>"gregwe", "ingredients5"=>"ggg", "ingredients6"=>"gergegw", "ingredients7"=>"gegeg", "ingredients8"=>"gegwerg", "ingredients9"=>"gregerg", "ingredients10"=>"fgeger", "measurements1"=>"rthrthtr", "measurements2"=>"gregwerg", "measurements3"=>"regwergw", "measurements4"=>"gergwer", "measurements5"=>"grwergwer", "measurements6"=>"gergerg", "measurements7"=>"gergreg", "measurements8"=>"ggrweg", "measurements9"=>"gergwerg", "measurements10"=>"grgergewre", "instructions"=>"", "user_id"=>1}}
+Unpermitted parameters: :ingredients1, :ingredients2, :ingredients3, :ingredients4, :ingredients5, :ingredients6, :ingredients7, :ingredients8, :ingredients9, :ingredients10, :measurements1, :measurements2, :measurements3, :measurements4, :measurements5, :measurements6, :measurements7, :measurements8, :measurements9, :measurements10
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[36mRecipe Create (1.6ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "servings", "instructions", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "wtvwce"], ["meal_image", "geertge"], ["cuisine", "vghvt"], ["region", "egege"], ["cook_time", "greg"], ["servings", "geg"], ["instructions", ""], ["created_at", "2019-06-06 13:09:00.263034"], ["updated_at", "2019-06-06 13:09:00.263034"], ["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:16
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:16
+Redirected to http://localhost:4567/recipes/4
+Completed 302 Found in 53ms (ActiveRecord: 44.1ms)
+
+
+Started OPTIONS "/recipes/4" for ::1 at 2019-06-06 09:09:00 -0400
+Started GET "/recipes/4" for ::1 at 2019-06-06 09:09:00 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"4", "recipe"=>{}}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 09:09:14 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/getgr" for 127.0.0.1 at 2019-06-06 09:09:14 -0400
+Started GET "/geertge" for 127.0.0.1 at 2019-06-06 09:09:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/getgr"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/geertge"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recipe/geertge" for 127.0.0.1 at 2019-06-06 09:09:19 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 09:09:19 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/geertge"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mRecipe Load (7.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 9ms (ActiveRecord: 7.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+  [1m[35m (41.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRecipes (20190603194856)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (60.6ms)[0m  [1m[35mDROP TABLE "recipes"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (27.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190603194856"]]
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRecipes (20190603194856)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (57.1ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients1" character varying, "ingredients2" character varying, "ingredients3" character varying, "ingredients4" character varying, "ingredients5" character varying, "ingredients6" character varying, "ingredients7" character varying, "ingredients8" character varying, "ingredients9" character varying, "ingredients10" character varying, "measurements1" character varying, "measurements2" character varying, "measurements3" character varying, "measurements4" character varying, "measurements5" character varying, "measurements6" character varying, "measurements7" character varying, "measurements8" character varying, "measurements9" character varying, "measurements10" character varying, "servings" character varying, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190603194856_create_recipes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190603194856"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (41.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRecipes (20190603194856)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (43.4ms)[0m  [1m[35mDROP TABLE "recipes"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190603194856"]]
+  ↳ bin/rails:9
+  [1m[35m (48.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRecipes (20190603194856)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients1" character varying, "ingredients2" character varying, "ingredients3" character varying, "ingredients4" character varying, "ingredients5" character varying, "ingredients6" character varying, "ingredients7" character varying, "ingredients8" character varying, "ingredients9" character varying, "ingredients10" character varying, "measurements1" character varying, "measurements2" character varying, "measurements3" character varying, "measurements4" character varying, "measurements5" character varying, "measurements6" character varying, "measurements7" character varying, "measurements8" character varying, "measurements9" character varying, "measurements10" character varying, "servings" character varying, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190603194856_create_recipes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190603194856"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "rachelgonzo"], ["created_at", "2019-06-06 14:01:19.762935"], ["updated_at", "2019-06-06 14:01:19.762935"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+Started OPTIONS "/recipes" for ::1 at 2019-06-06 10:01:39 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rachelgonzalez/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/recipes" for ::1 at 2019-06-06 10:01:39 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:01:43 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:01:46 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (7916.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (247.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (205.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (504.3ms)[0m  [1m[35mCREATE DATABASE "feed_me_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (363.2ms)[0m  [1m[35mCREATE DATABASE "feed_me_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients1" character varying, "ingredients2" character varying, "ingredients3" character varying, "ingredients4" character varying, "ingredients5" character varying, "ingredients6" character varying, "ingredients7" character varying, "ingredients8" character varying, "ingredients9" character varying, "ingredients10" character varying, "measurements1" character varying, "measurements2" character varying, "measurements3" character varying, "measurements4" character varying, "measurements5" character varying, "measurements6" character varying, "measurements7" character varying, "measurements8" character varying, "measurements9" character varying, "measurements10" character varying, "servings" character varying, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:50
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:50
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190603201910)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603194856),
+(20190603185713);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-06 14:05:47.081567"], ["updated_at", "2019-06-06 14:05:47.081567"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients1" character varying, "ingredients2" character varying, "ingredients3" character varying, "ingredients4" character varying, "ingredients5" character varying, "ingredients6" character varying, "ingredients7" character varying, "ingredients8" character varying, "ingredients9" character varying, "ingredients10" character varying, "measurements1" character varying, "measurements2" character varying, "measurements3" character varying, "measurements4" character varying, "measurements5" character varying, "measurements6" character varying, "measurements7" character varying, "measurements8" character varying, "measurements9" character varying, "measurements10" character varying, "servings" character varying, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:50
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:50
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190603201910)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603194856),
+(20190603185713);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-06 14:05:47.179090"], ["updated_at", "2019-06-06 14:05:47.179090"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-06 14:05:47.181783"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "rachelgonzo"], ["created_at", "2019-06-06 14:05:47.210170"], ["updated_at", "2019-06-06 14:05:47.210170"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (35.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRecipes (20190603194856)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE "recipes"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190603194856"]]
+  ↳ bin/rails:9
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRecipes (20190603194856)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (46.5ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients1" character varying, "ingredients2" character varying, "ingredients3" character varying, "ingredients4" character varying, "ingredients5" character varying, "ingredients6" character varying, "ingredients7" character varying, "ingredients8" character varying, "ingredients9" character varying, "ingredients10" character varying, "measurements1" character varying, "measurements2" character varying, "measurements3" character varying, "measurements4" character varying, "measurements5" character varying, "measurements6" character varying, "measurements7" character varying, "measurements8" character varying, "measurements9" character varying, "measurements10" character varying, "servings" character varying, "instructions" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190603194856_create_recipes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190603194856"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2825879953952011110)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (187.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (200.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "feed_me_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (401.6ms)[0m  [1m[35mCREATE DATABASE "feed_me_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (405.0ms)[0m  [1m[35mCREATE DATABASE "feed_me_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients1" character varying, "ingredients2" character varying, "ingredients3" character varying, "ingredients4" character varying, "ingredients5" character varying, "ingredients6" character varying, "ingredients7" character varying, "ingredients8" character varying, "ingredients9" character varying, "ingredients10" character varying, "measurements1" character varying, "measurements2" character varying, "measurements3" character varying, "measurements4" character varying, "measurements5" character varying, "measurements6" character varying, "measurements7" character varying, "measurements8" character varying, "measurements9" character varying, "measurements10" character varying, "servings" character varying, "instructions" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:51
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:51
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190603201910)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603194856),
+(20190603185713);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-06 14:14:39.908234"], ["updated_at", "2019-06-06 14:14:39.908234"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "meal_image" character varying, "cuisine" character varying, "region" character varying, "cook_time" character varying, "ingredients1" character varying, "ingredients2" character varying, "ingredients3" character varying, "ingredients4" character varying, "ingredients5" character varying, "ingredients6" character varying, "ingredients7" character varying, "ingredients8" character varying, "ingredients9" character varying, "ingredients10" character varying, "measurements1" character varying, "measurements2" character varying, "measurements3" character varying, "measurements4" character varying, "measurements5" character varying, "measurements6" character varying, "measurements7" character varying, "measurements8" character varying, "measurements9" character varying, "measurements10" character varying, "servings" character varying, "instructions" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:51
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:51
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190603201910)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190603194856),
+(20190603185713);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-06 14:14:40.003903"], ["updated_at", "2019-06-06 14:14:40.003903"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-06 14:14:40.006930"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "rachelgonzo"], ["created_at", "2019-06-06 14:14:40.036850"], ["updated_at", "2019-06-06 14:14:40.036850"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mRecipe Create (0.6ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients1", "ingredients2", "ingredients3", "ingredients4", "ingredients5", "ingredients6", "ingredients7", "ingredients8", "measurements1", "measurements2", "measurements3", "measurements4", "measurements5", "measurements6", "measurements7", "measurements8", "servings", "instructions", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["name", "Spicy Arrabiata Penne"], ["meal_image", "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"], ["cuisine", "Vegetarian"], ["region", "Italy"], ["cook_time", "30 minutes"], ["ingredients1", "penne rigate"], ["ingredients2", "olive oil"], ["ingredients3", "garlic"], ["ingredients4", "chopped tomatoes"], ["ingredients5", "red chile"], ["ingredients6", "italian seasoning"], ["ingredients7", "basil"], ["ingredients8", "parmigiano-reggiano"], ["measurements1", "1 pound"], ["measurements2", "1/4 cup"], ["measurements3", "3 cloves"], ["measurements4", "1 tin"], ["measurements5", "1/2 teaspoon"], ["measurements6", "1/2 teaspoon"], ["measurements7", "6 leaves"], ["measurements8", "sprinkle"], ["servings", "4"], ["instructions", "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, \n    about 9 minutes. In a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, \n    until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. \n    Remove from the heat and add the chopped basil. Drain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm."], ["user_id", 1], ["created_at", "2019-06-06 14:14:40.122097"], ["updated_at", "2019-06-06 14:14:40.122097"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "rachelgonzo"], ["created_at", "2019-06-06 14:15:00.166532"], ["updated_at", "2019-06-06 14:15:00.166532"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients1", "ingredients2", "ingredients3", "ingredients4", "ingredients5", "ingredients6", "ingredients7", "ingredients8", "measurements1", "measurements2", "measurements3", "measurements4", "measurements5", "measurements6", "measurements7", "measurements8", "servings", "instructions", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["name", "Spicy Arrabiata Penne"], ["meal_image", "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"], ["cuisine", "Vegetarian"], ["region", "Italy"], ["cook_time", "30 minutes"], ["ingredients1", "penne rigate"], ["ingredients2", "olive oil"], ["ingredients3", "garlic"], ["ingredients4", "chopped tomatoes"], ["ingredients5", "red chile"], ["ingredients6", "italian seasoning"], ["ingredients7", "basil"], ["ingredients8", "parmigiano-reggiano"], ["measurements1", "1 pound"], ["measurements2", "1/4 cup"], ["measurements3", "3 cloves"], ["measurements4", "1 tin"], ["measurements5", "1/2 teaspoon"], ["measurements6", "1/2 teaspoon"], ["measurements7", "6 leaves"], ["measurements8", "sprinkle"], ["servings", "4"], ["instructions", "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, \n    about 9 minutes. In a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, \n    until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. \n    Remove from the heat and add the chopped basil. Drain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm."], ["user_id", 1], ["created_at", "2019-06-06 14:15:00.221249"], ["updated_at", "2019-06-06 14:15:00.221249"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+Started OPTIONS "/recipes" for ::1 at 2019-06-06 10:15:24 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rachelgonzalez/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/recipes" for ::1 at 2019-06-06 10:15:24 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 38ms (Views: 29.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:15:35 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (2.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:11 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (4.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:17 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (9.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 12ms (Views: 2.0ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:22 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:26 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (21.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 23ms (Views: 2.2ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:33 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (18.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 21ms (Views: 2.3ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:36 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (8.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:41 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (14.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 16ms (Views: 1.9ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:46 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:49 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:53 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (2.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:17:59 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (13.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 16ms (Views: 2.2ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:18:03 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 10ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:19:10 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (3.8ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 5ms (ActiveRecord: 3.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:19:18 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (21.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 23ms (ActiveRecord: 21.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:19:50 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (7.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 9ms (ActiveRecord: 7.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:19:56 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:01 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (2.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:03 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:07 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:10 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:13 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (14.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 16ms (ActiveRecord: 14.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:16 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (6.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 8ms (ActiveRecord: 6.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:26 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:32 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:38 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:42 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:50 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:20:54 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:21:52 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (4.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 5ms (ActiveRecord: 4.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes" for ::1 at 2019-06-06 10:22:01 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:22:04 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:23:30 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 4ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:25:06 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (4.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 5ms (ActiveRecord: 4.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:25:27 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (16.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 18ms (ActiveRecord: 16.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:25:33 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started OPTIONS "/recipes" for ::1 at 2019-06-06 10:26:13 -0400
+Started GET "/recipes" for ::1 at 2019-06-06 10:26:13 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:26:14 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started GET "/recipes" for ::1 at 2019-06-06 10:26:19 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:29:03 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:29:13 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'
+Started OPTIONS "/recipes" for ::1 at 2019-06-06 10:30:43 -0400
+Started POST "/recipes" for ::1 at 2019-06-06 10:30:43 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"test", "meal_image"=>"test", "cuisine"=>"test", "region"=>"Test", "cook_time"=>"test", "servings"=>"Test", "ingredients1"=>"test", "ingredients2"=>"test", "ingredients3"=>"test", "ingredients4"=>"test", "ingredients5"=>"", "ingredients6"=>"", "ingredients7"=>"", "ingredients8"=>"", "ingredients9"=>"", "ingredients10"=>"", "measurements1"=>"test", "measurements2"=>"test", "measurements3"=>"test", "measurements4"=>"test", "measurements5"=>"test", "measurements6"=>"", "measurements7"=>"", "measurements8"=>"", "measurements9"=>"", "measurements10"=>"", "instructions"=>"testestestest", "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:14
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14
+  [1m[36mRecipe Create (41.8ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients1", "ingredients2", "ingredients3", "ingredients4", "ingredients5", "ingredients6", "ingredients7", "ingredients8", "ingredients9", "ingredients10", "measurements1", "measurements2", "measurements3", "measurements4", "measurements5", "measurements6", "measurements7", "measurements8", "measurements9", "measurements10", "servings", "instructions", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30) RETURNING "id"[0m  [["name", "test"], ["meal_image", "test"], ["cuisine", "test"], ["region", "Test"], ["cook_time", "test"], ["ingredients1", "test"], ["ingredients2", "test"], ["ingredients3", "test"], ["ingredients4", "test"], ["ingredients5", ""], ["ingredients6", ""], ["ingredients7", ""], ["ingredients8", ""], ["ingredients9", ""], ["ingredients10", ""], ["measurements1", "test"], ["measurements2", "test"], ["measurements3", "test"], ["measurements4", "test"], ["measurements5", "test"], ["measurements6", ""], ["measurements7", ""], ["measurements8", ""], ["measurements9", ""], ["measurements10", ""], ["servings", "Test"], ["instructions", "testestestest"], ["user_id", 1], ["created_at", "2019-06-06 14:30:43.643081"], ["updated_at", "2019-06-06 14:30:43.643081"]]
+  ↳ app/controllers/recipes_controller.rb:14
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:14
+Redirected to http://localhost:4567/recipes/3
+Completed 302 Found in 115ms (ActiveRecord: 87.9ms)
+
+
+Started OPTIONS "/recipes/3" for ::1 at 2019-06-06 10:30:43 -0400
+Started GET "/recipes/3" for ::1 at 2019-06-06 10:30:43 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"3", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipes" for ::1 at 2019-06-06 10:30:46 -0400
+Processing by RecipesController#create as JSON
+  Parameters: {"recipe"=>{"name"=>"", "meal_image"=>"", "cuisine"=>"", "region"=>"", "cook_time"=>"", "servings"=>"", "ingredients1"=>"", "ingredients2"=>"", "ingredients3"=>"", "ingredients4"=>"", "ingredients5"=>"", "ingredients6"=>"", "ingredients7"=>"", "ingredients8"=>"", "ingredients9"=>"", "ingredients10"=>"", "measurements1"=>"", "measurements2"=>"", "measurements3"=>"", "measurements4"=>"", "measurements5"=>"", "measurements6"=>"", "measurements7"=>"", "measurements8"=>"", "measurements9"=>"", "measurements10"=>"", "instructions"=>"", "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:14
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "meal_image", "cuisine", "region", "cook_time", "ingredients1", "ingredients2", "ingredients3", "ingredients4", "ingredients5", "ingredients6", "ingredients7", "ingredients8", "ingredients9", "ingredients10", "measurements1", "measurements2", "measurements3", "measurements4", "measurements5", "measurements6", "measurements7", "measurements8", "measurements9", "measurements10", "servings", "instructions", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30) RETURNING "id"[0m  [["name", ""], ["meal_image", ""], ["cuisine", ""], ["region", ""], ["cook_time", ""], ["ingredients1", ""], ["ingredients2", ""], ["ingredients3", ""], ["ingredients4", ""], ["ingredients5", ""], ["ingredients6", ""], ["ingredients7", ""], ["ingredients8", ""], ["ingredients9", ""], ["ingredients10", ""], ["measurements1", ""], ["measurements2", ""], ["measurements3", ""], ["measurements4", ""], ["measurements5", ""], ["measurements6", ""], ["measurements7", ""], ["measurements8", ""], ["measurements9", ""], ["measurements10", ""], ["servings", ""], ["instructions", ""], ["user_id", 1], ["created_at", "2019-06-06 14:30:46.449596"], ["updated_at", "2019-06-06 14:30:46.449596"]]
+  ↳ app/controllers/recipes_controller.rb:14
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:14
+Redirected to http://localhost:4567/recipes/4
+Completed 302 Found in 11ms (ActiveRecord: 6.2ms)
+
+
+Started OPTIONS "/recipes/4" for ::1 at 2019-06-06 10:30:46 -0400
+Started GET "/recipes/4" for ::1 at 2019-06-06 10:30:46 -0400
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"4", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-06 10:30:48 -0400
+Processing by RecipesController#index as JSON
+  [1m[36mRecipe Load (4.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2019-06-06 10:30:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/test"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recipe/test" for 127.0.0.1 at 2019-06-06 10:30:50 -0400
+Started GET "/recipes/[object%20Object]" for 127.0.0.1 at 2019-06-06 10:30:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/recipe/test"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by RecipesController#show as JSON
+  Parameters: {"id"=>"[object Object]"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=[object Object]):
+  
+app/controllers/recipes_controller.rb:8:in `show'

@@ -11,8 +11,6 @@ class RecipesController < ActionController::API
 
     def create 
         @recipe = Recipe.new(recipe_params)
-        @recipe.ingredients = params[:ingredients]
-        @recipe.measurements = params[:measurements]
         if @recipe.save
             redirect_to recipe_path(@recipe)
         else
@@ -38,6 +36,26 @@ class RecipesController < ActionController::API
     private 
 
     def recipe_params
-        params.require(:recipe).permit(:name, :meal_image, :cuisine, :region, :cook_time, :ingredients, :measurements, :servings, :instructions, :user_id)
+        params.require(:recipe).permit(:name, :meal_image, :cuisine, :region, :cook_time, :servings, :instructions, :user_id, 
+            :ingredients1,
+            :ingredients2,
+            :ingredients3,
+            :ingredients4,
+            :ingredients5,
+            :ingredients6,
+            :ingredients7,
+            :ingredients8,
+            :ingredients9,
+            :ingredients10,
+            :measurements1,
+            :measurements2,
+            :measurements3,
+            :measurements4,
+            :measurements5,
+            :measurements6,
+            :measurements7,
+            :measurements8,
+            :measurements9,
+            :measurements10)
     end
 end
