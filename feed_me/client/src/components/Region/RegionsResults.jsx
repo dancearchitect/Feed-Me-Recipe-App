@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-class CuisinesResults extends Component {
+class RegionsResults extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,7 +16,7 @@ class CuisinesResults extends Component {
   componentDidMount = async () => {
     
     await this.fetchAllRecipies();
-    await this.filterByCuisine();
+    await this.filterByRegion();
    
   };
 
@@ -30,9 +30,9 @@ class CuisinesResults extends Component {
     });
   };
 
-  fetchAllRecipiesByCuisine = async recipe_id => {
+  fetchAllRecipiesByRegion = async recipe_id => {
     const recipes = await axios.get(
-      `http://localhost:4567/cuisines/${recipe_id}`
+      `http://localhost:4567/regions/${recipe_id}`
     );
     const apiData = recipes.data;
     this.setState({
@@ -41,16 +41,16 @@ class CuisinesResults extends Component {
     });
   };
 
-  filterByCuisine = async (name) => {
+  filterByRegion = async (name) => {
     const filter = await this.state.apiData.filter(recipe => {
-      return recipe.cuisine === this.props.location.state.recipe;
+      return recipe.region === this.props.location.state.recipe;
     });
     this.setState({ filterRecipe: filter });
     console.log(filter);
     this.setState({ filtered: true });
   };
 
-  showAllRecipesByCuisineOnPage = () => {
+  showAllRecipesByRegionOnPage = () => {
     console.log("trying to show results filtered");
     return this.state.filterRecipe.map(recipe => {
       console.log("filter");
@@ -87,7 +87,7 @@ class CuisinesResults extends Component {
         <div className="recipes-list">
 
           {this.state.filtered ? (
-            this.showAllRecipesByCuisineOnPage()
+            this.showAllRecipesByRegionOnPage()
           ) : (
             <h3>Slicing Tomatoes...</h3>
           )}
@@ -97,4 +97,4 @@ class CuisinesResults extends Component {
   }
 }
 
-export default CuisinesResults;
+export default RegionsResults;

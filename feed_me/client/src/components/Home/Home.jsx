@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "../../assets/feedme-logo.png";
 
 import "./Home.css";
+import CuisinesResults from "../Cuisines/CuisinesResults";
 
 class Home extends Component {
   render() {

@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     width: 480px;
     padding: 10px;
+    margin: 5px;
 }
 
 .all-recipes-stats {
@@ -22,4 +23,5 @@
 .recipes-list {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }

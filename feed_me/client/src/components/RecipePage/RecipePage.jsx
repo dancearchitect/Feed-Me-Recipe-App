@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link, Redirect } from "react-router-dom";
 import "./RecipePage.css";
 
 class RecipePage extends Component {
@@ -8,14 +9,17 @@ class RecipePage extends Component {
     this.state = {
       apiData: null,
       apiDataLoaded: false,
-      recipe: {}
+      recipe: {},
+      recipeId: null,
+      deleted: false,
     };
   }
   fetchRecipe = async recipe_id => {
+    console.log(recipe_id.id);
     const recipe = await axios.get(
-      `http://localhost:3000/recipes/${recipe_id}`
+      `http://localhost:3000/recipes/${recipe_id.id}`
     );
-    this.setState({ recipe: recipe.data });
+    this.setState({ recipe: recipe.data, recipeId: recipe_id.id });
     return recipe.data;
   };
 
@@ -32,7 +36,7 @@ class RecipePage extends Component {
 
             <img
               src={this.props.location.state.meal_image}
-              alt="pasta"
+              alt="meal"
               className="recipe-page-image"
             />
             <div className="recipe-page-stats">
@@ -105,12 +109,46 @@ class RecipePage extends Component {
     );
   }
 
+  handleRecipeDelete = async id => {
+    console.log("butts");
+    await axios.delete(`http://localhost:3000/recipes/${id}`);
+    this.setState({deleted: true})
+  };
+
   render() {
-    return (
-      <div className="App">
-        <div>{this.showRecipeOnPage()}</div>
-      </div>
-    );
+    console.log(this.state.recipeId);
+    const { recipeId, recipe } = this.state;
+    if(!this.state.deleted){
+      return (
+        <div className="show-recipe">
+          <div>{this.showRecipeOnPage()}</div>
+          <div className="recipe-page-delete">
+            <button
+              type="button"
+              className="recipe-page-delete-button"
+              onClick={() => this.handleRecipeDelete(recipeId)}
+            >
+              Eat it!
+            </button>
+  
+            <Link
+              to={{
+                pathname: "/updaterecipe",
+                state: { recipe, recipeId }
+              }}
+            >
+              <button type="button" className="recipe-page-delete-button">
+                Update
+              </button>
+            </Link>
+          </div>
+        </div>
+      );
+    }
+    else{
+        return <Redirect to='/recipes' />
+    }
+    
   }
 }
 

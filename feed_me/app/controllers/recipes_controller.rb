@@ -12,10 +12,10 @@ class RecipesController < ActionController::API
     def create 
         @recipe = Recipe.new(recipe_params)
         if @recipe.save
-            redirect_to recipe_path(@recipe)
-        else
-            render :new
-        end
+            render json: @recipe, status: :ok
+          else
+            render json: { errors: @recipe.errors }, status: :unprocessable_entity
+          end
     end
 
     def update

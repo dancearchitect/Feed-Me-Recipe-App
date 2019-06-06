@@ -10,6 +10,8 @@ import Cuisines from "../Cuisines/CuisinesList";
 import Region from "../Region/RegionList";
 import CreateRecipe from "../../components/CreateRecipe/CreateRecipe";
 import CuisinesResults from "../Cuisines/CuisinesResults";
+import UpdateRecipe from "../UpdateRecipe/UpdateRecipe";
+import RegionsResults from "../Region/RegionsResults";
 
 class Header extends Component {
   render() {
@@ -37,17 +39,44 @@ class Header extends Component {
           </nav>
         </div>
         <Switch>
-          <Route path="/recipes" render={() => <AllRecipes setData={this.props.setData}/>} />
-          <Route path="/cuisines" render={() => <Cuisines />} />
-          <Route path="/regions" render={() => <Region />} />
           <Route
-            path="/recipe/:id"
-            render={props => <RecipePage {...props} setData={this.props.setData}/>}
+            exact
+            path="/recipes"
+            render={() => <AllRecipes setData={this.props.setData} />}
           />
-          <Route path="/new" render={() => <CreateRecipe appendRecipe={this.props.appendRecipe}/>} />
+          <Route exact path="/cuisines" render={() => <Cuisines />} />
+          <Route exact path="/regions" render={() => <Region />} />
+
           <Route
-            path="/cuisines/:cuisine"
-            render={props => <CuisinesResults {...props} />}
+            exact
+            path="/new"
+            render={() => (
+              <CreateRecipe appendRecipe={this.props.appendRecipe} />
+            )}
+          />
+          <Route
+            exact
+            path="/recipe/:id"
+            render={props => (
+              <RecipePage {...props} setData={this.props.setData} />
+            )}
+          />
+          <Route
+            path={`/cuisines/:cuisine`}
+            render={props => (
+              <CuisinesResults {...props} setData={this.props.setData} />
+            )}
+          />
+          <Route
+            path={`/regions/:region`}
+            render={props => (
+              <RegionsResults {...props} setData={this.props.setData} />
+            )}
+          />
+          <Route
+            exact
+            path="/updaterecipe"
+            render={props => <UpdateRecipe {...props} />}
           />
         </Switch>
       </div>

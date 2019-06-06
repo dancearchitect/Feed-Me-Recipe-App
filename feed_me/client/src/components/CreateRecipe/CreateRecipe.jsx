@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./CreateRecipe.css";
+import { Redirect } from "react-router-dom";
 
 import { createRecipe } from "../../services/api-helper";
 
@@ -34,49 +35,30 @@ class CreateRecipe extends Component {
         measurements8: "",
         measurements9: "",
         measurements10: "",
-        instructions: ""
-      }
+        instructions: "",
+        user_id: 1
+      },
+      created: false
     };
   }
+
+  // setRedirect = () => {
+  //   this.setState({
+  //     redirect: true
+  //   });
+  // };
+  // renderRedirect = () => {
+  //   if (this.state.redirect) {
+  //     return <Redirect to="/recipes" />;
+  //   }
+  // };
 
   createRecipeSubmit = async e => {
     e.preventDefault();
     const newRecipe = this.state.newrecipe;
     const recipeCreated = await createRecipe(newRecipe);
     console.log(recipeCreated);
-
-    this.setState({
-      newrecipe: {
-        name: "",
-        meal_image: "",
-        cuisine: "",
-        region: "",
-        cook_time: "",
-        servings: "",
-        ingredients1: "",
-        ingredients2: "",
-        ingredients3: "",
-        ingredients4: "",
-        ingredients5: "",
-        ingredients6: "",
-        ingredients7: "",
-        ingredients8: "",
-        ingredients9: "",
-        ingredients10: "",
-        measurements1: "",
-        measurements2: "",
-        measurements3: "",
-        measurements4: "",
-        measurements5: "",
-        measurements6: "",
-        measurements7: "",
-        measurements8: "",
-        measurements9: "",
-        measurements10: "",
-        instructions: ""
-      }
-    });
-    this.props.appendRecipe(recipeCreated);
+    this.setState({created: true})
   };
 
   handleFormChange = async e => {
@@ -120,6 +102,7 @@ class CreateRecipe extends Component {
       measurements10,
       instructions
     } = this.state;
+    if(!this.state.created){
     return (
       <div>
         <h1>Create Recipe</h1>
@@ -386,12 +369,20 @@ class CreateRecipe extends Component {
               </div>
             </div>
             <div className="create-recipe-button">
-              <button type="submit">Create Recipe!</button>
+              <div className="create-recipe-button">
+                {/* {this.renderRedirect()} */}
+                <button type="submit">
+                  Create Recipe!
+                </button>
+              </div>
             </div>
           </form>
         </div>
       </div>
-    );
+    );}
+    else{
+      return <Redirect to='/recipes' />
+    }
   }
 }
 
