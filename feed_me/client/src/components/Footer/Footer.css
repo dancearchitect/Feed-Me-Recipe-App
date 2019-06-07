@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+  background-color: #768fff;
+  color: white;
+  height: 5vh;
+  position: fixed;
+  bottom: 0;
+  padding: 5px;
+}
+.footer-container {
+  min-height: 10vh;
+}
+
+@media (max-width: 500px) {
+    footer {
+        padding-bottom: 10px;
+    }
+}

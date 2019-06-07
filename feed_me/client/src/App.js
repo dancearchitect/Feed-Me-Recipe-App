@@ -4,6 +4,7 @@ import "./App.css";
 
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   constructor() {
@@ -35,7 +36,8 @@ class App extends Component {
         <Header appendRecipe={this.appendRecipe} setData={this.setData}/>
 
         <Route exact path="/" render={() => <Home />} />
-      </div>
+        <Footer />
+        </div>
     );
   }
 }

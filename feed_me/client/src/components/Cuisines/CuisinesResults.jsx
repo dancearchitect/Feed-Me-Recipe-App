@@ -14,10 +14,8 @@ class CuisinesResults extends Component {
   }
 
   componentDidMount = async () => {
-    
     await this.fetchAllRecipies();
     await this.filterByCuisine();
-   
   };
 
   fetchAllRecipies = async () => {
@@ -41,7 +39,7 @@ class CuisinesResults extends Component {
     });
   };
 
-  filterByCuisine = async (name) => {
+  filterByCuisine = async name => {
     const filter = await this.state.apiData.filter(recipe => {
       return recipe.cuisine === this.props.location.state.recipe;
     });
@@ -80,12 +78,10 @@ class CuisinesResults extends Component {
   };
 
   render() {
-    console.log(this.props.location.state)
     return (
       <div>
         <h1>All Recipes</h1>
         <div className="recipes-list">
-
           {this.state.filtered ? (
             this.showAllRecipesByCuisineOnPage()
           ) : (

@@ -1,8 +1,10 @@
-form {
-  width: 720px;
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe");
+ 
+ form {
+  width: 60vw;
   display: flex;
   flex-direction: column;
-  border: 2px solid indianred;
+  border: 2px solid #768fff;
   padding: 10px;
   margin: 5px;
   border-radius: 5px;
@@ -17,6 +19,7 @@ input {
   height: 20px;
   outline: none;
   border: 1px solid black;
+  padding: 3px;
 }
 
 .create-recipe-form {
@@ -35,12 +38,14 @@ button {
   padding: 20px;
   border-radius: 10px;
   font-size: 14px;
-  background-color: indianred;
+  background-color: #768fff;
   display: flex;
   justify-content: center;
   outline: none;
   border: none;
   margin-top: 5px;
+  color: white;
+  font-family: "ZCOOL KuaiLe", cursive;
 }
 
 .create-recipe-button {
@@ -49,29 +54,59 @@ button {
 }
 
 .create-recipe-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-/* .create-recipe-column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-} */
-
-.create-recipe-ingred-measure-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.create-recipe-ingred-measure-column {
-  display: flex;
+.create-recipe-column {
+ display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+}
+
+.create-recipe-instructions-size {
+  width: 55vw;
+  height: 20vh;
+}
+
+.create-recipe-instructions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.create-recipe-instructions-title {
+  font-size: 16px;
+  display: flex;
+}
+
+.create-recipe-form-title {
+  font-size: 20px;
+}
+
+.create-recipe-button-size {
+  width: 12vw;
+  height: 7vh;
+  color: white;
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+.create-form {
+  width: 70vw;
+}
+
+  .create-recipe-row {
+    display: flex;
+    justify-content: center;
+  }
+  .create-recipe-button-size {
+    width: 20vw;
+    height: 14vh;
+  }
+
 }

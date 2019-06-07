@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe");
+
 .recipe-page-image {
   width: 26vw;
   height: 30vw;
-  border: 5px solid indianred;
+  border: 5px solid #768fff;
   border-radius: 5px;
 }
 
@@ -15,6 +17,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 90vw;
+  margin-top: 10px;
 }
 
 .recipe-page-column {
@@ -29,18 +32,17 @@
 .ingred-measure-container {
   display: flex;
   flex-direction: column;
-  width: 15vw;
+  width: 18vw;
   font-size: 15px;
-  line-height: 16px;
+  line-height: 2.5em;
 }
 
 .instructions {
   display: flex;
-  justify-content: baseline;
-  line-height: 30px;
+  line-height: 28px;
   text-align: left;
-  font-size: 16px;
-  border: 2px solid indianred;
+  font-size: 15px;
+  border: 2px solid #768fff;
   padding: 5px;
 }
 
@@ -50,4 +52,67 @@
   width: 22vw;
   font-size: 16px;
   justify-content: space-evenly;
+  border: 2px solid #768fff;
+  margin: 10px 0px;
+  padding: 5px;
+}
+
+.recipe-page-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40vw;
+}
+
+.recipe-page-delete-button {
+  font-family: "ZCOOL KuaiLe", cursive;
+  width: 12vw;
+}
+
+.recipe-page-name {
+  font-size: 24px;
+}
+
+@media (max-width: 500px) {
+  .recipe-page-image {
+    width: 55vw;
+    height: 50vw;
+  }
+  .recipe-page-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipe-page-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .recipe-page-stats {
+    display: flex;
+    flex-direction: row;
+    width: 45vw;
+  }
+
+  .recipe-page-buttons {
+    width: 100%;
+  }
+
+  .recipe-page-delete-button {
+    width: 20vw;
+  }
+
+  .ingred-measure-container {
+    display: flex;
+    flex-direction: column;
+    width: 54vw;
+    font-size: 15px;
+    line-height: 2em;
+  }
+
+  .recipe-page-name {
+    margin-top: 100px;
+  }
+
+  .recipe-page-name {
+    margin: 10px;
+  }
 }

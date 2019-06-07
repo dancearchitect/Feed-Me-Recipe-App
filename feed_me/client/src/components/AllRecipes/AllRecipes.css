@@ -1,27 +1,62 @@
 .all-recipes-image img {
-    width: 250px;
-    border: 10px solid indianred;
-    border-radius: 10px;
+  width: 250px;
+  border: 10px solid #768fff;
+  border-radius: 10px;
 }
 
 .all-recipes {
-    border: 2px solid indianred;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 480px;
-    padding: 10px;
-    margin: 5px;
+  border: 2px solid #768fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40vw;
+  padding: 10px;
+  margin: 5px;
+  background-color: whitesmoke;
 }
 
 .all-recipes-stats {
-    padding-left: 30px;
-    line-height: 43px;
-    font-size: 14px;
+  padding-left: 30px;
+  line-height: 43px;
+  font-size: 14px;
 }
 
 .recipes-list {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
+
+.all-recipes-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .all-recipes-image img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+    .all-recipes-image img {
+      width: 160px;
+    }
+  }
+
+
+@media (max-width: 500px) {
+    .all-recipes-image img {
+      width: 180px;
+      
+    }
+
+    .all-recipes {
+        width: 70vw;
+    }
+  }
+
+
+
+

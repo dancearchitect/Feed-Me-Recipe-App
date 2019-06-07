@@ -6,7 +6,7 @@
 }
 
 .header {
-    background-color: indianred;
+    background-color: #768fff;
     padding-bottom: 5px;
 }
 
@@ -27,9 +27,21 @@ li {
 a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 a:hover {
-    color: limegreen;
+    color: black;
+}
+
+@media (max-width: 500px) {
+    a {
+        font-size: 18px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        line-height: 24px;
+    }
 }

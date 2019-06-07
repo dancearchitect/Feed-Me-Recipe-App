@@ -9,7 +9,7 @@ class CuisinesList extends Component {
     this.state = {
       apiData: null,
       apiDataLoaded: false,
-      cuisines : []
+      cuisines: []
     };
   }
 
@@ -20,34 +20,34 @@ class CuisinesList extends Component {
       apiData,
       apiDataLoaded: true
     });
-    await this.stopMultiples()
+    await this.stopMultiples();
   };
 
   stopMultiples = () => {
-    let arr = []
+    let arr = [];
     let firstArr = this.state.apiData.map(recipe => {
-      return recipe.cuisine
-    })
+      return recipe.cuisine;
+    });
     firstArr.map(recipe => {
       firstArr.filter(filter => {
-        if(arr.includes(filter)){
+        if (arr.includes(filter)) {
           // console.log('filter',filter)
           // console.log('arr',arr)
-          return  null;
+          return null;
         } else {
-          arr.push(filter)
+          arr.push(filter);
         }
-      })
-      return recipe
-    })
-    console.log(firstArr)
-    this.setState({cuisines:arr})
-    return arr
-  }
+      });
+      return recipe;
+    });
+    console.log(firstArr);
+    this.setState({ cuisines: arr });
+    return arr;
+  };
 
   showAllCuisinesOnPage() {
     return this.state.cuisines.map(recipe => {
-      console.log(recipe)
+      console.log(recipe);
       return (
         <div className="cuisines" key={recipe}>
           <div className="all-cuisines">
@@ -55,7 +55,7 @@ class CuisinesList extends Component {
               <Link
                 to={{
                   pathname: `/cuisines/${recipe}`,
-                  state: {recipe}
+                  state: { recipe }
                 }}
               >
                 {recipe}
@@ -76,10 +76,8 @@ class CuisinesList extends Component {
             this.showAllCuisinesOnPage()
           ) : (
             <h3>Flipping Pages...</h3>
-            
           )}
         </div>
-        <button onClick={this.stopMultiples}>FERewfarfa</button>
       </div>
     );
   }

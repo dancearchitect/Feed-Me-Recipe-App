@@ -49,7 +49,7 @@ class AllRecipes extends Component {
             </Link>
           </h3>
           <div className="all-recipes-stats">
-            <p>{recipe.name}</p>
+            <p className="all-recipes-name">{recipe.name}</p>
             <p>Cuisine: {recipe.cuisine}</p>
             <p>Region: {recipe.region}</p>
             <p>Cook Time: {recipe.cook_time}</p>

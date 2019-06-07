@@ -1,3 +1,24 @@
 .all-cuisines a {
-    color: cornflowerblue;
+  color: #768fff;
+  opacity: 0.5;
+}
+
+.all-cuisines a:hover {
+  opacity: 1;
+}
+
+.cuisines-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+@media (max-width: 500px) {
+  .cuisines-list {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5em;
+  }
 }

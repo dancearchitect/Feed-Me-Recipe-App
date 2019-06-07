@@ -1,8 +1,10 @@
-form {
-    width: 720px;
+
+ 
+ form {
+    width: 60vw;
     display: flex;
     flex-direction: column;
-    border: 2px solid indianred;
+    border: 2px solid #768fff;
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
@@ -17,9 +19,10 @@ form {
     height: 20px;
     outline: none;
     border: 1px solid black;
+    padding: 3px;
   }
   
-  .create-recipe-form {
+  .update-recipe-form {
     display: flex;
     justify-content: center;
   }
@@ -35,43 +38,72 @@ form {
     padding: 20px;
     border-radius: 10px;
     font-size: 14px;
-    background-color: indianred;
+    background-color: #768fff;
     display: flex;
     justify-content: center;
     outline: none;
     border: none;
     margin-top: 5px;
+    opacity: 0.5;
+  }
+
+  button:hover {
+      opacity: 1;
   }
   
-  .create-recipe-button {
+  .update-recipe-button {
       display: flex;
       justify-content: center;
   }
   
-  .create-recipe-row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-  }
-  
-  /* .create-recipe-column {
-      display: flex;
-      flex-direction: column;
-      flex-basis: 100%;
-      flex: 1;
-  } */
-  
-  .create-recipe-ingred-measure-row {
+  .update-recipe-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
   }
   
-  .create-recipe-ingred-measure-column {
-    display: flex;
+  .update-recipe-column {
+   display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+  }
+  
+  .update-recipe-instructions-size {
+    width: 55vw;
+    height: 20vh;
+  }
+  
+  .update-recipe-instructions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  .update-recipe-instructions-title {
+    font-size: 16px;
+    display: flex;
+  }
+  
+  .update-recipe-form-title {
+    font-size: 20px;
+  }
+  
+  .update-recipe-button-size {
+    width: 12vw;
+    height: 7vh;
+    font-size: 16px;
+  }
+
+  @media (max-width: 500px) {
+      .update-form {
+          width: 70vw;
+      }
+
+      .update-recipe-button-size {
+        width: 20vw;
+        height: 7vh;
+      }
   }

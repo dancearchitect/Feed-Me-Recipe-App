@@ -8,7 +8,8 @@ class RegionsList extends Component {
     super();
     this.state = {
       apiData: null,
-      apiDataLoaded: false
+      apiDataLoaded: false,
+     regions : []
     };
   }
 
@@ -19,21 +20,45 @@ class RegionsList extends Component {
       apiData,
       apiDataLoaded: true
     });
+    await this.stopMultiples()
   };
 
+  stopMultiples = () => {
+    let arr = []
+    let firstArr = this.state.apiData.map(recipe => {
+      return recipe.region
+    })
+    firstArr.map(recipe => {
+      firstArr.filter(filter => {
+        if(arr.includes(filter)){
+          // console.log('filter',filter)
+          // console.log('arr',arr)
+          return  null;
+        } else {
+          arr.push(filter)
+        }
+      })
+      return recipe
+    })
+    console.log(firstArr)
+    this.setState({regions:arr})
+    return arr
+  }
+
   showAllRegionsOnPage() {
-    return this.state.apiData.map(recipe => {
+    return this.state.regions.map(recipe => {
+      console.log(recipe)
       return (
-        <div className="regions" key={recipe.id}>
+        <div className="regions" key={recipe}>
           <div className="all-regions">
             <h3>
               <Link
                 to={{
-                  pathname: `/regions/${recipe.region}`,
-                  state: recipe
+                  pathname: `/regions/${recipe}`,
+                  state: {recipe}
                 }}
               >
-                {recipe.region}
+                {recipe}
               </Link>
             </h3>
           </div>
@@ -51,6 +76,7 @@ class RegionsList extends Component {
             this.showAllRegionsOnPage()
           ) : (
             <h3>Flipping Pages...</h3>
+            
           )}
         </div>
       </div>

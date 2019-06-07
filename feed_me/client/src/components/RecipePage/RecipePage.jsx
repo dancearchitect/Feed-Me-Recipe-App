@@ -32,7 +32,7 @@ class RecipePage extends Component {
       <div className="recipe-page" key={this.props.location.state.id}>
         <div className="recipe-page-row">
           <div className="recipe-page-column">
-            <h3>{this.props.location.state.name}</h3>
+            <h3 className="recipe-page-name">{this.props.location.state.name}</h3>
 
             <img
               src={this.props.location.state.meal_image}
@@ -122,7 +122,7 @@ class RecipePage extends Component {
       return (
         <div className="show-recipe">
           <div>{this.showRecipeOnPage()}</div>
-          <div className="recipe-page-delete">
+          <div className="recipe-page-buttons">
             <button
               type="button"
               className="recipe-page-delete-button"

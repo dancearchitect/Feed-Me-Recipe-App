@@ -5,8 +5,24 @@
 
 .home-intro {
     font-size: 18px;
+    line-height: 2em;
 }
 
 .home {
     padding: 20px;
+}
+
+@media (max-width: 500px) {
+    .logo {
+        width: 400px;
+        padding: 10px;
+    }
+
+    .home-intro {
+        font-size: 18px;
+        width: 90vw; 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
