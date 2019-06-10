@@ -2,22 +2,23 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import RegionsList from "./RegionsList";
+
 class RegionsResults extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      apiData: null,
+      apiData: [],
       apiDataLoaded: false,
       recipes: {},
-      filtered: false
+      filtered: false,
+      filterRecipe: []
     };
   }
 
   componentDidMount = async () => {
-    
     await this.fetchAllRecipies();
     await this.filterByRegion();
-   
   };
 
   fetchAllRecipies = async () => {
@@ -41,19 +42,16 @@ class RegionsResults extends Component {
     });
   };
 
-  filterByRegion = async (name) => {
+  filterByRegion = async name => {
     const filter = await this.state.apiData.filter(recipe => {
       return recipe.region === this.props.location.state.recipe;
     });
     this.setState({ filterRecipe: filter });
-    console.log(filter);
     this.setState({ filtered: true });
   };
 
   showAllRecipesByRegionOnPage = () => {
-    console.log("trying to show results filtered");
     return this.state.filterRecipe.map(recipe => {
-      console.log("filter");
       return (
         <div className="all-recipes" key={recipe.id}>
           <h3 className="all-recipes-image">
@@ -80,12 +78,20 @@ class RegionsResults extends Component {
   };
 
   render() {
-    console.log(this.props.location.state)
     return (
       <div>
-        <h1>All Recipes</h1>
+        <div className="regions-results-back-button-container">
+          <Link
+            to={{
+              pathname: "/regions"
+            }}
+          >
+            <button type="button" className="regions-results-back-button">
+              Back
+            </button>
+          </Link>
+        </div>
         <div className="recipes-list">
-
           {this.state.filtered ? (
             this.showAllRecipesByRegionOnPage()
           ) : (

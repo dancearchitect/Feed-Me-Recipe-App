@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe");
  
  form {
-  width: 60vw;
+  width: 45vw;
   display: flex;
   flex-direction: column;
   border: 2px solid #768fff;
@@ -33,19 +33,18 @@ textarea {
   margin: 10px;
 }
 
-button {
+.create-recipe-button-size {
   width: 80px;
   padding: 20px;
   border-radius: 10px;
   font-size: 14px;
   background-color: #768fff;
-  display: flex;
-  justify-content: center;
   outline: none;
   border: none;
   margin-top: 5px;
   color: white;
   font-family: "ZCOOL KuaiLe", cursive;
+  opacity: 0.5;
 }
 
 .create-recipe-button {
@@ -68,7 +67,7 @@ button {
 }
 
 .create-recipe-instructions-size {
-  width: 55vw;
+  width: 42vw;
   height: 20vh;
 }
 
@@ -105,8 +104,11 @@ button {
     justify-content: center;
   }
   .create-recipe-button-size {
-    width: 20vw;
+    width: 24vw;
     height: 14vh;
   }
 
+  .create-recipe-instructions-size {
+    width: 60vw;
+  }
 }

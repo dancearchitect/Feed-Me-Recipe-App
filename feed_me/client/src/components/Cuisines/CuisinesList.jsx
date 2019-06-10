@@ -21,6 +21,7 @@ class CuisinesList extends Component {
       apiDataLoaded: true
     });
     await this.stopMultiples();
+    this.props.unsetFromCuisine()
   };
 
   stopMultiples = () => {
@@ -40,14 +41,12 @@ class CuisinesList extends Component {
       });
       return recipe;
     });
-    console.log(firstArr);
     this.setState({ cuisines: arr });
     return arr;
   };
 
   showAllCuisinesOnPage() {
     return this.state.cuisines.map(recipe => {
-      console.log(recipe);
       return (
         <div className="cuisines" key={recipe}>
           <div className="all-cuisines">
@@ -56,7 +55,7 @@ class CuisinesList extends Component {
                 to={{
                   pathname: `/cuisines/${recipe}`,
                   state: { recipe }
-                }}
+                }} onClick={this.props.setFromCuisine}
               >
                 {recipe}
               </Link>
@@ -68,9 +67,9 @@ class CuisinesList extends Component {
   }
 
   render() {
+    
     return (
       <div>
-        <h1>Cuisines List</h1>
         <div className="cuisines-list">
           {this.state.apiDataLoaded ? (
             this.showAllCuisinesOnPage()

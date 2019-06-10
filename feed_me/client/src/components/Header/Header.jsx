@@ -7,13 +7,26 @@ import homelogo from "../../assets/audrey-logo.png";
 import AllRecipes from "../../components/AllRecipes/AllRecipes";
 import RecipePage from "../../components/RecipePage/RecipePage";
 import Cuisines from "../Cuisines/CuisinesList";
-import Region from "../Region/RegionList";
+import Region from "../Region/RegionsList";
 import CreateRecipe from "../../components/CreateRecipe/CreateRecipe";
 import CuisinesResults from "../Cuisines/CuisinesResults";
 import UpdateRecipe from "../UpdateRecipe/UpdateRecipe";
 import RegionsResults from "../Region/RegionsResults";
 
 class Header extends Component {
+  constructor(){
+    super()
+    this.state = {
+      fromCuisine: false
+    }
+  }
+  setFromCuisine = () => {
+    this.setState({fromCuisine: true})
+  }
+
+  unsetFromCuisine = () => {
+    this.setState({fromCuisine: false})
+  }
   render() {
     return (
       <div>
@@ -44,7 +57,13 @@ class Header extends Component {
             path="/recipes"
             render={() => <AllRecipes setData={this.props.setData} />}
           />
-          <Route exact path="/cuisines" render={() => <Cuisines />} />
+          <Route exact path="/cuisines" render={(props) => 
+            <Cuisines 
+            {...props}
+              fromCuisine={this.state.fromCuisine}
+              setFromCuisine={this.setFromCuisine}
+              unsetFromCuisine={this.unsetFromCuisine}
+            />} />
           <Route exact path="/regions" render={() => <Region />} />
 
           <Route
@@ -58,13 +77,21 @@ class Header extends Component {
             exact
             path="/recipe/:id"
             render={props => (
-              <RecipePage {...props} setData={this.props.setData} />
+              <RecipePage {...props} 
+              fromCuisine={this.state.fromCuisine}
+              setData={this.props.setData}
+              setFromCuisine={this.setFromCuisine}
+              unsetFromCuisine={this.unsetFromCuisine}
+              />
             )}
           />
           <Route
             path={`/cuisines/:cuisine`}
             render={props => (
-              <CuisinesResults {...props} setData={this.props.setData} />
+              <CuisinesResults {...props} 
+              setData={this.props.setData}
+              setFromCuisine={this.setFromCuisine}
+               />
             )}
           />
           <Route

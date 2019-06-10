@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe");
 
 .recipe-page-image {
-  width: 26vw;
+  width: 28vw;
   height: 30vw;
   border: 5px solid #768fff;
   border-radius: 5px;
@@ -33,17 +33,19 @@
   display: flex;
   flex-direction: column;
   width: 18vw;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 2.5em;
+  text-align: left;
 }
 
 .instructions {
   display: flex;
-  line-height: 28px;
+  line-height: 2em;
   text-align: left;
-  font-size: 15px;
+  font-size: 16px;
   border: 2px solid #768fff;
   padding: 5px;
+  margin: 5px;
 }
 
 .recipe-page-stats {
@@ -57,25 +59,58 @@
   padding: 5px;
 }
 
-.recipe-page-buttons {
+.recipe-page-buttons-container {
   display: flex;
   justify-content: space-evenly;
-  width: 40vw;
 }
 
-.recipe-page-delete-button {
+.recipe-page-delete-update-button {
+  width: 8vw;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #768fff;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  border: none;
+  margin: 5px;
+  opacity: 0.5;
   font-family: "ZCOOL KuaiLe", cursive;
-  width: 12vw;
+  color: white;
 }
 
 .recipe-page-name {
   font-size: 24px;
+  margin: 5px;
+}
+
+.recipe-page-back-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.recipe-page-back-button {
+  width: 8vw;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #768fff;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  border: none;
+  margin: 5px;
+  opacity: 0.5;
+  font-family: "ZCOOL KuaiLe", cursive;
+  color: white;
 }
 
 @media (max-width: 500px) {
   .recipe-page-image {
-    width: 55vw;
+    width: 58vw;
     height: 50vw;
+    margin-top: 10px;
   }
   .recipe-page-row {
     display: flex;
@@ -89,30 +124,32 @@
   .recipe-page-stats {
     display: flex;
     flex-direction: row;
-    width: 45vw;
+    width: 56vw;
   }
 
-  .recipe-page-buttons {
+  .recipe-page-buttons-container {
     width: 100%;
   }
 
-  .recipe-page-delete-button {
+  .recipe-page-delete-update-button {
     width: 20vw;
   }
 
   .ingred-measure-container {
     display: flex;
     flex-direction: column;
-    width: 54vw;
-    font-size: 15px;
+    width: 60vw;
+    font-size: 16px;
     line-height: 2em;
+    margin-left: 50px;
   }
 
   .recipe-page-name {
-    margin-top: 100px;
+    margin-top: 80px;
   }
 
-  .recipe-page-name {
-    margin: 10px;
+  .recipe-page-back-button {
+    width: 15vw;
+    margin-top: 10px;
   }
 }

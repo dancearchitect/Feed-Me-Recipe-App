@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import CuisinesList from "./CuisinesList";
+
 class CuisinesResults extends Component {
   constructor() {
     super();
@@ -48,6 +50,7 @@ class CuisinesResults extends Component {
     this.setState({ filtered: true });
   };
 
+
   showAllRecipesByCuisineOnPage = () => {
     console.log("trying to show results filtered");
     return this.state.filterRecipe.map(recipe => {
@@ -56,6 +59,7 @@ class CuisinesResults extends Component {
         <div className="all-recipes" key={recipe.id}>
           <h3 className="all-recipes-image">
             <Link
+              onClick={this.props.setFromCuisine}
               to={{
                 pathname: `/recipe/${recipe.id}`,
                 state: recipe
@@ -80,7 +84,17 @@ class CuisinesResults extends Component {
   render() {
     return (
       <div>
-        <h1>All Recipes</h1>
+        <div className="cuisines-results-back-button-container">
+          <Link
+            to={{
+              pathname: "/cuisines",
+            }}
+          >
+            <button type="button" className="cuisines-results-back-button">
+              Back
+            </button>
+          </Link>
+        </div>
         <div className="recipes-list">
           {this.state.filtered ? (
             this.showAllRecipesByCuisineOnPage()

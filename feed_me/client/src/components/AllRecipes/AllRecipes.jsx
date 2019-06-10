@@ -59,6 +59,7 @@ class AllRecipes extends Component {
       );
     });
   }
+  
 
   render() {
     return (

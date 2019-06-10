@@ -9,13 +9,14 @@ class RegionsList extends Component {
     this.state = {
       apiData: null,
       apiDataLoaded: false,
-     regions : []
+      regions : []
     };
   }
 
   componentDidMount = async () => {
     const recipes = await axios.get("http://localhost:4567/recipes");
     const apiData = recipes.data;
+    console.log(apiData)
     this.setState({
       apiData,
       apiDataLoaded: true
@@ -31,8 +32,6 @@ class RegionsList extends Component {
     firstArr.map(recipe => {
       firstArr.filter(filter => {
         if(arr.includes(filter)){
-          // console.log('filter',filter)
-          // console.log('arr',arr)
           return  null;
         } else {
           arr.push(filter)
@@ -46,6 +45,8 @@ class RegionsList extends Component {
   }
 
   showAllRegionsOnPage() {
+    const {apiData} = this.state
+
     return this.state.regions.map(recipe => {
       console.log(recipe)
       return (
@@ -55,7 +56,7 @@ class RegionsList extends Component {
               <Link
                 to={{
                   pathname: `/regions/${recipe}`,
-                  state: {recipe}
+                  state: {recipe,apiData}
                 }}
               >
                 {recipe}
@@ -70,7 +71,6 @@ class RegionsList extends Component {
   render() {
     return (
       <div>
-        <h1>Regions List</h1>
         <div className="regions-list">
           {this.state.apiDataLoaded ? (
             this.showAllRegionsOnPage()
