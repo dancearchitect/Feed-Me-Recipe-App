@@ -8,12 +8,16 @@ class Home extends Component {
     return (
       <div className="home">
         <h1>
-          <img src={logo} alt="logo" className="logo"/>
+          <img src={logo} alt="logo" className="logo" />
           <div className="home-intro">
-              <p>FeedMe! is a simple site made for chefs of all levels.<br />
-              Users can search for recipes through cuisine or region and add their
-              own recipes to the site!<br />
-              Recipes can also be updated and deleted (Eat it!) by all users.</p>
+            <p>
+              FeedMe! is a simple site made for chefs of all levels.
+              <br />
+              Users can search for recipes through cuisine or region and add
+              their own recipes to the site!
+              <br />
+              Recipes can also be updated and deleted (Eat it!) by all users.
+            </p>
           </div>
         </h1>
       </div>

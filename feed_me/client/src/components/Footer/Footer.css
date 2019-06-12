@@ -17,7 +17,7 @@ footer {
 }
 
 @media (max-width: 500px) {
-    footer {
-        padding-bottom: 10px;
-    }
+  footer {
+    padding-bottom: 10px;
+  }
 }

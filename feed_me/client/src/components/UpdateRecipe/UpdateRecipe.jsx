@@ -283,9 +283,11 @@ class UpdateRecipe extends Component {
                   />
                 </div>
               </div>
-                <div className="update-recipe-button-container">
-                  <button type="submit" className="update-recipe-button-size">Update Recipe!</button>
-                </div>
+              <div className="update-recipe-button-container">
+                <button type="submit" className="update-recipe-button-size">
+                  Update Recipe!
+                </button>
+              </div>
             </form>
           </div>
         </div>

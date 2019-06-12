@@ -1,50 +1,50 @@
 .all-regions a {
-    color: #768fff;
-    opacity: 0.5;
+  color: #768fff;
+  opacity: 0.5;
 }
 
 .all-regions a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .regions-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .regions-results-back-button-container {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 
 .regions-results-back-button {
-    width: 8vw;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    background-color: #768fff;
-    display: flex;
-    justify-content: center;
-    outline: none;
-    border: none;
-    margin: 5px;
-    opacity: 0.5;
-    font-family: "ZCOOL KuaiLe", cursive;
-    color: white;
+  width: 8vw;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #768fff;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  border: none;
+  margin: 5px;
+  opacity: 0.5;
+  font-family: "ZCOOL KuaiLe", cursive;
+  color: white;
 }
 
 @media (max-width: 500px) {
-    .regions-list {
-        display: flex;
-        flex-direction: column;
-        line-height: 2.5em;
-    }
+  .regions-list {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5em;
+  }
 
-    .regions-results-back-button {
-        width: 15vw;
-    }
+  .regions-results-back-button {
+    width: 15vw;
+  }
 }

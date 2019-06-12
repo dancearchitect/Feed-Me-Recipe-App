@@ -42,6 +42,32 @@ class RecipePage extends Component {
       );
     }
   };
+  //   if (!this.props.fromRegion) {
+  //     return (
+  //       <Link
+  //         to={{
+  //           pathname: "/recipes"
+  //         }}
+  //       >
+  //         <button type="button" className="recipe-page-back-button">
+  //           Back
+  //         </button>
+  //       </Link>
+  //     );
+  //   } else {
+  //     return (
+  //       <Link
+  //         to={{
+  //           pathname: "/regions"
+  //         }}
+  //       >
+  //         <button type="button" className="recipe-page-back-button">
+  //           Back
+  //         </button>
+  //       </Link>
+  //     );
+  //   }
+  // };
   fetchRecipe = async recipe_id => {
     console.log(recipe_id.id);
     const recipe = await axios.get(

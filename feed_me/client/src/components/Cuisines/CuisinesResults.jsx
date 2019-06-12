@@ -50,7 +50,6 @@ class CuisinesResults extends Component {
     this.setState({ filtered: true });
   };
 
-
   showAllRecipesByCuisineOnPage = () => {
     console.log("trying to show results filtered");
     return this.state.filterRecipe.map(recipe => {
@@ -87,7 +86,7 @@ class CuisinesResults extends Component {
         <div className="cuisines-results-back-button-container">
           <Link
             to={{
-              pathname: "/cuisines",
+              pathname: "/cuisines"
             }}
           >
             <button type="button" className="cuisines-results-back-button">

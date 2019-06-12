@@ -1,97 +1,94 @@
+label {
+  display: flex;
+}
 
-  
-  label {
-    display: flex;
-  }
-  
-  input {
-    width: 200px;
-    height: 20px;
-    outline: none;
-    border: 1px solid black;
-    padding: 3px;
-  }
-  
-  .update-recipe-form {
-    display: flex;
-    justify-content: center;
-  }
-  
-  textarea {
-    outline: none;
-    border: 1px solid black;
-    margin: 10px;
-  }
-  
+input {
+  width: 200px;
+  height: 20px;
+  outline: none;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.update-recipe-form {
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  outline: none;
+  border: 1px solid black;
+  margin: 10px;
+}
+
 .update-recipe-button-size {
-    width: 8vw;
-    height: 12vh;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    background-color: #768fff;
-    display: flex;
-    justify-content: center;
-    outline: none;
-    border: none;
-    margin: 5px;
-    opacity: 0.5;
-    font-family: "ZCOOL KuaiLe", cursive;
-    color: white;
-  } 
+  width: 8vw;
+  height: 12vh;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #768fff;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  border: none;
+  margin: 5px;
+  opacity: 0.5;
+  font-family: "ZCOOL KuaiLe", cursive;
+  color: white;
+}
 
-  button:hover {
-      opacity: 1;
-  }
-  
-  .update-recipe-button-container {
-      display: flex;
-      justify-content: center;
-  }
-  
-  .update-recipe-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
-  .update-recipe-column {
-   display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-  }
-  
-  .update-recipe-instructions-size {
-    width: 42vw;
-    height: 20vh;
-  }
-  
-  .update-recipe-instructions {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 10px;
-  }
-  
-  .update-recipe-instructions-title {
-    font-size: 16px;
-    display: flex;
-  }
-  
-  .update-recipe-form-title {
-    font-size: 20px;
-  }
-  
+button:hover {
+  opacity: 1;
+}
 
-  @media (max-width: 500px) {
-      .update-form {
-          width: 70vw;
-      }
+.update-recipe-button-container {
+  display: flex;
+  justify-content: center;
+}
 
-      .update-recipe-button-size {
-        width: 25vw;
-        height: 10vh;
-      }
+.update-recipe-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.update-recipe-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.update-recipe-instructions-size {
+  width: 42vw;
+  height: 20vh;
+}
+
+.update-recipe-instructions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.update-recipe-instructions-title {
+  font-size: 16px;
+  display: flex;
+}
+
+.update-recipe-form-title {
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .update-form {
+    width: 70vw;
   }
+
+  .update-recipe-button-size {
+    width: 25vw;
+    height: 10vh;
+  }
+}

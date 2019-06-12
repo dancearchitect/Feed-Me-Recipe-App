@@ -319,7 +319,9 @@ class CreateRecipe extends Component {
                 </div>
               </div>
               <div className="create-recipe-button">
-                <button type="submit" className="create-recipe-button-size">Create Recipe!</button>
+                <button type="submit" className="create-recipe-button-size">
+                  Create Recipe!
+                </button>
               </div>
             </form>
           </div>

@@ -32,7 +32,7 @@
 .ingred-measure-container {
   display: flex;
   flex-direction: column;
-  width: 18vw;
+  width: 20vw;
   font-size: 18px;
   line-height: 2.5em;
   text-align: left;
@@ -51,7 +51,7 @@
 .recipe-page-stats {
   display: flex;
   flex-wrap: wrap;
-  width: 22vw;
+  width: 24vw;
   font-size: 16px;
   justify-content: space-evenly;
   border: 2px solid #768fff;

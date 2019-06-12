@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe");
- 
- form {
+
+form {
   width: 45vw;
   display: flex;
   flex-direction: column;
@@ -48,8 +48,8 @@ textarea {
 }
 
 .create-recipe-button {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .create-recipe-row {
@@ -60,7 +60,7 @@ textarea {
 }
 
 .create-recipe-column {
- display: flex;
+  display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
@@ -95,9 +95,9 @@ textarea {
 }
 
 @media (max-width: 500px) {
-.create-form {
-  width: 70vw;
-}
+  .create-form {
+    width: 70vw;
+  }
 
   .create-recipe-row {
     display: flex;

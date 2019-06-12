@@ -21,7 +21,7 @@ class CuisinesList extends Component {
       apiDataLoaded: true
     });
     await this.stopMultiples();
-    this.props.unsetFromCuisine()
+    this.props.unsetFromCuisine();
   };
 
   stopMultiples = () => {
@@ -32,8 +32,6 @@ class CuisinesList extends Component {
     firstArr.map(recipe => {
       firstArr.filter(filter => {
         if (arr.includes(filter)) {
-          // console.log('filter',filter)
-          // console.log('arr',arr)
           return null;
         } else {
           arr.push(filter);
@@ -55,7 +53,8 @@ class CuisinesList extends Component {
                 to={{
                   pathname: `/cuisines/${recipe}`,
                   state: { recipe }
-                }} onClick={this.props.setFromCuisine}
+                }}
+                onClick={this.props.setFromCuisine}
               >
                 {recipe}
               </Link>
@@ -67,7 +66,6 @@ class CuisinesList extends Component {
   }
 
   render() {
-    
     return (
       <div>
         <div className="cuisines-list">

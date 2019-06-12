@@ -9,46 +9,47 @@ class RegionsList extends Component {
     this.state = {
       apiData: null,
       apiDataLoaded: false,
-      regions : []
+      regions: []
     };
   }
 
   componentDidMount = async () => {
     const recipes = await axios.get("http://localhost:4567/recipes");
     const apiData = recipes.data;
-    console.log(apiData)
+    console.log(apiData);
     this.setState({
       apiData,
       apiDataLoaded: true
     });
-    await this.stopMultiples()
+    await this.stopMultiples();
+    this.props.unsetFromRegion();
   };
 
   stopMultiples = () => {
-    let arr = []
+    let arr = [];
     let firstArr = this.state.apiData.map(recipe => {
-      return recipe.region
-    })
+      return recipe.region;
+    });
     firstArr.map(recipe => {
       firstArr.filter(filter => {
-        if(arr.includes(filter)){
-          return  null;
+        if (arr.includes(filter)) {
+          return null;
         } else {
-          arr.push(filter)
+          arr.push(filter);
         }
-      })
-      return recipe
-    })
-    console.log(firstArr)
-    this.setState({regions:arr})
-    return arr
-  }
+      });
+      return recipe;
+    });
+    console.log(firstArr);
+    this.setState({ regions: arr });
+    return arr;
+  };
 
   showAllRegionsOnPage() {
-    const {apiData} = this.state
+    const { apiData } = this.state;
 
     return this.state.regions.map(recipe => {
-      console.log(recipe)
+      console.log(recipe);
       return (
         <div className="regions" key={recipe}>
           <div className="all-regions">
@@ -56,7 +57,7 @@ class RegionsList extends Component {
               <Link
                 to={{
                   pathname: `/regions/${recipe}`,
-                  state: {recipe,apiData}
+                  state: { recipe, apiData }
                 }}
               >
                 {recipe}
@@ -76,7 +77,6 @@ class RegionsList extends Component {
             this.showAllRegionsOnPage()
           ) : (
             <h3>Flipping Pages...</h3>
-            
           )}
         </div>
       </div>
